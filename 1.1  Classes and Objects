@@ -46,7 +46,7 @@ IIT Hyderabad
 
 Create another package: temp
 create class: StudentUse2
----------------------------------------
+----------------------------------------
 
 package temp;
 
@@ -74,4 +74,10 @@ public class StudentUse2 {
 output:
 IIT Hyderabad
 8
+------------------------------------------
+
+Key Points:-
+1. Default means Within the Package
+2. Public means Anywhere
+3. Private means Only within the same class
 
