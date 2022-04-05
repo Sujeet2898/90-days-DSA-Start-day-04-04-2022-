@@ -1,0 +1,146 @@
+Q1.  Find the error
+--------------------------------------------------------------
+
+Which line of the following code would generate an error?
+class Test{
+    static int marks;
+    void set_marks(int marks)
+    {
+        this.marks=marks;               //Line 1
+    }
+}
+class MCQ {
+    public static void main (String[] args) {
+        Test t=new Test();              
+        t.set_marks(78);                //Line 2
+        System.out.print(Test.marks);   //Line 3
+    }
+}
+-------------------------------------------------------------
+
+Options
+This problem has only one correct answer:-
+1. Line 1
+2. Line 2
+3. Line 3
+4. No error 
+
+Solution Description(4)
+There is no error in this code. In this class, there is just a single variable, which is, static variable. Static variables are property of the class, but you can access it through objects. Hence, line 1 and 2 did not generate any error.  
+
+***************************************************************
+
+Q2.  Find the error
+----------------------------------------------------
+
+Which line of the following code would give an error?
+class Car{
+    int year;
+    String company_name;
+}
+class New_Car {
+    public static void main (String[] args) {
+        Car c=new Car();        //Line 1
+        year=2018;              //Line 2
+        c.company_name="Honda"; //Line 3
+    }
+}
+----------------------------------------------------
+
+Options
+This problem has only one correct answer:-
+1. Line 1
+2. Line 2 
+3. Line 3
+4. No error
+Correct Answer(2)
+Solution Description
+In line 2 , the year is not a variable in main.So we need to use the object of class Car.
+
+************************************************************
+
+Q3.  Possible output
+------------------------------------------------------
+
+What can be the possible output of the following code?
+class Student{
+    int roll_no;
+    String name;
+}
+class Test {
+        public static void main (String[] args) {
+        Student s=new Student();
+        System.out.println(s);
+    }
+}
+--------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 547a85bc
+2. [I@232204a1
+3. Student@232204a1 
+4. Student@4578ig32
+
+Solution Description(3)
+The class is of Type student and it would be followed by a hexadecimal code.
+So the address would be like Student@.....
+hexadecimal code.
+(Option 4 is not a hexadecimal code.)
+
+********************************************************
+
+Q4.  Memory allocation
+------------------------------------------------------
+
+Which of these operators is used to allocate memory for an object?
+1. malloc
+2. alloc
+3. new 
+4. give
+
+Solution(3)
+
+*********************************************************
+
+Q5.  Create object
+-----------------------------------------------------
+
+Which of the following is a valid statement to create an object of class Bird in Java ?
+1. Bird b = new Bird;
+2. Bird b = new Bird(); 
+3. Bird b;
+4. new Bird b;
+
+Solution(2)
+
+*********************************************************
+
+Q6.  Find correct statement
+--------------------------------------------------------
+
+Figure out the correct statement
+class Car{
+    String color;
+    double price;
+}
+
+public class CarUse {
+    public static void main(String[] args) {
+        Car c = new Car();
+        //Figure out the correct statement to set color of the car object referred by c to “white”
+    }
+}
+-------------------------------------------------------
+
+Options
+This problem has only one correct answer:-
+1. c->color = “white”
+2. Car.color = “white”
+3. c.color = "white"; 
+
+Solution(3)
+
+*********************************************************
+
+
+
