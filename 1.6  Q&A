@@ -1,0 +1,222 @@
+Q1.  Predict the output
+---------------------------------------------------
+
+What will be the output of the following code?
+class Ninja 
+{ 
+    Ninja(String name) 
+    { 
+        System.out.println("Constructor one " + name); 
+    } 
+    Ninja(String name, int age) 
+    { 
+        System.out.println("Constructor two " + name + " "+ age); 
+    } 
+    Ninja(long id) 
+    { 
+        System.out.println("Constructor three " + id); 
+    } 
+} 
+
+class Student 
+{ 
+    public static void main(String[] args) 
+    {  
+        Ninja geek3 = new Ninja("Dharmesh", 26); 
+    } 
+} 
+----------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Constructor one Dharmesh
+2. Constructor two Dharmesh 26 
+3. Constructor three 26
+
+Solution Description(2)
+The constructor with two arguments string and integer is called.
+
+***********************************************************
+
+Q2.  Predict the output
+
+What will be the output of the following code?
+class Test 
+{ 
+    int a; 
+    int b; 
+    Test() 
+    {   
+        this(10, 20);   
+        System.out.print("constructor one "); 
+    } 
+    Test(int a, int b) 
+    { 
+        this.a = a; 
+        this.b = b; 
+        System.out.print("constructor two "); 
+    } 
+}
+class new_test{
+    public static void main(String[] args) 
+    { 
+        Test object = new Test(); 
+    } 
+} 
+-------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. constructor one
+2. constructor two
+3. constructor two constructor one 
+4. constructor one constructor two
+
+Solution Description(3)
+When the object of Test class is created,the constructor with no arguments is called.
+When  this(10,20) is encountered , the constructor with two arguments int and int is called because this is the reference of the object. So using this way we can call more than one constructor.
+
+*************************************************
+
+Q3.  What is the output
+----------------------------------------------- 
+
+What will be the Output ?
+Both classes are in same package.
+class Box{
+    int width;
+    int height;
+    int length;
+    void volume(){
+        System.out.println(length * width * height);
+    }
+}
+
+public class BoxUse {
+    public static void main(String[] args) {
+        Box b = new Box();
+        b.height = 5;
+        b.width = 4;
+        b.volume();
+    }
+}
+-------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Error
+2. 0 
+3. 20
+4. None of the above
+
+Solution Description(2)
+Default value for an integer data member of a class is 0. Thus default value for length is 0, whereas height and width are initialised to 5 and 4 respectively. Volume will thus be 0.
+
+***************************************************************
+
+Q4.  Fill the output
+-----------------------------------------------
+
+What will be the output of the following code ?
+class Student{
+    String name;
+    int rollNo;
+    Student(int num){
+    rollNo = num;
+    }   
+    public void print(){
+    System.out.print(name +" " + rollNo+” “);
+    }
+}
+
+public class StudentUse {
+    public static void main(String[] args) {
+    Student s = new Student(12);
+    s.print();
+    }
+} 
+------------------------------------------------
+Answer:-
+null 12
+-------
+Solution Description
+Constructor is called when an object is created, here when we create a Student object coressponding student object is created and rollNo is assigned to 12, whereas name is assigned null (as default value for String data member is null). So output is null 12
+
+*******************************************************************
+
+Q5.  Fill the output
+-------------------------------------------
+
+What will be the output of the following code ?
+Both classes are in same package.
+class Student{
+    String name;
+    int rollNo;
+    Student(int num){
+    rollNo = num;
+    }   
+    public void print(){
+    System.out.print(name +" " + rollNo+” “);
+    }
+}
+
+public class StudentUse {
+    public static void main(String[] args) {
+        Student s = new Student();
+        s.rollNo = 15;
+        s.print();
+    }
+}
+----------------------------------------------
+Options
+This problem has only one correct answer:-
+1. null 0
+2. null 15
+3. Compilation Error 
+
+Solution Description(3)
+There is Compilation error - “constructor Student() is undefined” because the default constructor is available only till the point we don’t create our own constructor. So Student class has only one constructor which require roll number as argument, hence we should pass integer as argument while creating any Student object.
+
+**************************************************
+
+Q6.  What is the output
+----------------------------------------------
+
+What will be the output of the following code ?
+class Student{
+    String name;
+    int rollNo;
+
+    // Constructor 1
+    Student(int num){
+            rollNo = num;
+            name = "abc";
+    }   
+
+    // Constructor 2
+    Student(int num, String str){
+            rollNo = num;
+            name = str;
+    }
+
+    public void print(){
+            System.out.print(name +" " + rollNo+" ");
+    }
+}
+
+public class StudentUse {
+    public static void main(String[] args) {
+            Student s1 = new Student(101);
+            s1.print();
+            Student s2 = new Student(150, "xyz");
+            s2.print();
+    }
+}
+--------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Error
+2. null 101 xyz 150
+3. abc 101 xyz 150 
+
+Solution Description(3)
+While creating first Student object we have just passed single integer argument, hence constructor 1 will be called and for second Student object constructor 2 will be called. So output will be abc 101 xyz 150. 
+
+**************************************************
