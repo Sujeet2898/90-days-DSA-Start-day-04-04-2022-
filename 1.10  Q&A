@@ -1,0 +1,227 @@
+Q1.  Predict the output
+--------------------------------------------
+
+What will be the output of the following code?
+class Car{
+    static int year;
+    String company_name;
+}
+class new_Car {
+    public static void main (String[] args) {
+        Car c=new Car();        
+        Car.year=2018;              
+        c.company_name="KIA";
+        Car d=new Car();
+        System.out.print(d.year);
+    }
+}
+---------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 0
+2. Error
+3. 2018 
+
+Solution Description(3)
+Year is of static type i.e. only one memory block of year is created , same for every object.
+So, it would print 2018.
+
+**************************************************
+
+Q2.  Find the error
+--------------------------------------------------
+
+Which line of the following code would generate an error?
+class Test{
+    static int marks;
+    void set_marks(int marks)
+    {
+        this.marks=marks;               //Line 1
+    }
+}
+class MCQ {
+    public static void main (String[] args) {
+        Test t=new Test();              
+        t.set_marks(78);                //Line 2
+        System.out.print(Test.marks);   //Line 3
+    }
+}
+---------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Line 1
+2. Line 2
+3. Line 3
+4. No error 
+
+Solution Description(4)
+There is no error in this code. In this class, there is just a single variable, which is, static variable. Static variables are property of the class, but you can access it through objects. Hence, line 1 and 2 did not generate any error.  
+
+***************************************************
+
+Q3.  Predict the output
+---------------------------------------------
+
+What would be the output of the following code?
+class Test 
+{ 
+    static int a = 10; 
+    static int b; 
+    static void fun(){ 
+        b = a * 4; 
+    } 
+} 
+class MCQ{
+   public static void main(String[] args) 
+    { 
+      Test t=new Test();
+      t.fun();
+      System.out.print(Test.a+Test.b);
+    } 
+} 
+---------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 10
+2. 20
+3. 50 
+4. Error
+
+Solution Description(3)
+When t.fun() is called . a=10 and using this b=40.
+We print a+b=50.
+
+**********************************************
+
+Q4. Find the error
+----------------------------------------------
+
+Which of the following line(s)would produce an error?
+class Test 
+{
+    static int a = 10; 
+    int b = 20; 
+    static void fun1() 
+    { 
+        a = 20;                             //Line 1
+        b = 10;                             //Line 2
+        fun2();                             //Line 3
+        System.out.print(this.b);           //Line 4
+    } 
+    void fun2() 
+    {     
+        System.out.println("from m2"); 
+    }
+}
+class MCQ{    
+    public static void main(String[] args) 
+    { 
+        Test.fun1(); 
+    } 
+} 
+------------------------------------------------
+Options
+This problem may have one or more correct answers:-
+1. Line 1
+2. Line 2 
+3. Line 3 
+4. Line 4 
+
+Solution Description(2,3,4)
+Line 2: static functions cannot use non-static variables.
+Line 3: Static function cannot call non-static function.
+Line 4:this or super keyword cannot be used inside a static function.
+
+**************************************************
+
+Q5.  Reference keyword
+--------------------------------------------------
+
+Which keyword works as a reference to the current Object whose Method or constructor is being invoked ?
+
+Options
+1. import
+2. catch
+3. abstract
+4. this 
+
+Solution(4)
+
+**************************************************
+
+Q6.  What is the output
+--------------------------------------
+
+What will be the output of this code ?
+class Book{
+    final int price = 10;
+}
+
+public class MCQs {
+    public static void main(String[] args) {
+        Book b = new Book();
+        b.price = 16;
+        System.out.println(b.price);
+    }   
+}
+---------------------------------------
+Options
+This problem has only one correct answer:-
+1. 16
+2. 10
+3. Error 
+4. None of the above
+
+Solution Description
+price is a final field, thus statement “ b.price = 16 “ is incorrect since we cannot re assign a final variable
+
+****************************************
+
+Q7.  What is the output
+--------------------------------------
+
+What will be the output of this code ?
+class Book{
+    int price;
+    static int count; 
+
+    public Book(int price) {
+        this.price = price;
+        count++;
+    }    
+}
+
+public class MCQs {
+    public static void main(String[] args) {
+        System.out.print(Book.count + " ");
+        Book b1 = new Book(500);
+        Book b2 = new Book(600);
+        System.out.println(Book.count);
+    }
+}
+---------------------------------------
+Options
+This problem has only one correct answer:-
+1. Error
+2. 0 2 
+3. 0 0
+4. 2 2
+
+Solution(2)
+
+**********************************************
+
+Q7.  Constructor access
+---------------------------------------------
+
+Which of the modifier can't be used for constructors ?
+
+Options
+This problem has only one correct answer:-
+1. public
+2. private
+3. static 
+4. protected
+
+Solution Description(3)
+static keyword is bound to the class and not to an individual object, thus we can’t make constructors static.
