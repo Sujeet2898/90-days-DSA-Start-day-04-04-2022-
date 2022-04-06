@@ -1,0 +1,174 @@
+Q1.  Access Modifiers
+----------------------------------------------------
+
+Which access modifier can be used to access a variable outside the class and within the package?
+
+Options
+This problem may have one or more correct answers:-
+1. Public 
+2. Private
+3. Default 
+
+Solution(1,3)
+
+*********************************************************
+
+Q2.  Check for error
+------------------------------------
+
+Would the following code generate any error?
+class Student{
+    private int roll_no;
+    String name;
+}
+class DPS {
+        public static void main (String[] args) {
+        Student s=new Student();
+        s.name="Neha";
+        System.out.println(s.name);
+    }
+}
+
+Options
+This problem has only one correct answer:-
+1. Yes
+2. No 
+
+Solution(2)
+
+***********************************************************
+
+Q3.  Predict the output
+---------------------------------------------
+
+What will be the output of the following code?(Considering both the classes are in the same package).
+
+class Employee{
+    String name;
+        private int emp_id;
+    public void set_id(int id)
+    {
+        if(id>0)
+        emp_id=id;
+        else 
+        System.out.println("Invalid id");
+    }
+    public int get_id()
+    {
+        return emp_id;
+    }
+}
+class office {
+    public static void main (String[] args) {
+        Employee e=new Employee();  
+        e.set_id(10);
+        System.out.println(e.get_id());
+    }
+}
+
+Options
+This problem has only one correct answer:-
+1. 10 
+2. 0
+3. error
+
+Solution(1)
+
+**************************************************
+
+Q4.  What is the output
+----------------------------------------
+
+What will be the output of the following program ?
+// Class Shape and ShapeUse are in same package
+
+class Shape{
+    int height;
+    int width;
+}
+
+public class ShapeUse {
+    public static void main(String[] args) {
+        Shape s = new Shape();
+        s.height = 1;
+        System.out.println(s.height);
+    }
+}
+----------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Error
+2. 0
+3. 1 
+4. None of these
+
+Solution Description(3)
+Since height is a default data member of class Shape and Shape and ShapeUse both the classes are in same package. So we can access height via shape object in ShapeUse class.
+
+**********************************************
+
+Q5.  What will be the output of the following program ?
+----------------------------------------------------------
+
+// Class Shape and ShapeUse are in same package
+
+class Shape{
+    private int height;
+    private int width;
+}
+
+public class ShapeUse {
+    public static void main(String[] args) {
+        Shape s = new Shape();
+        System.out.println(s.height);
+    }
+}
+---------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Error 
+2. 0
+3. 1
+4. None of these
+
+Solution Description(1)
+As height is a private data member of class Shape, thus it can’t be accessed outside the class.
+
+************************************************************
+
+Q6.  What will be the output of the following code?
+----------------------------------------------------
+
+class Ninja 
+{ 
+    Ninja(String name) 
+    { 
+        System.out.println("Constructor one " + name); 
+    } 
+    Ninja(String name, int age) 
+    { 
+        System.out.println("Constructor two " + name + " "+ age); 
+    } 
+    Ninja(long id) 
+    { 
+        System.out.println("Constructor three " + id); 
+    } 
+} 
+
+class Student 
+{ 
+    public static void main(String[] args) 
+    {  
+        Ninja geek3 = new Ninja("Dharmesh", 26); 
+    } 
+} 
+---------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Constructor one Dharmesh
+2. Constructor two Dharmesh 26 
+3. Constructor three 26
+
+Solution Description(2)
+The constructor with two arguments string and integer is called.
+
