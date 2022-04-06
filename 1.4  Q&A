@@ -136,39 +136,15 @@ As height is a private data member of class Shape, thus it can’t be accessed o
 
 ************************************************************
 
-Q6.  What will be the output of the following code?
-----------------------------------------------------
-
-class Ninja 
-{ 
-    Ninja(String name) 
-    { 
-        System.out.println("Constructor one " + name); 
-    } 
-    Ninja(String name, int age) 
-    { 
-        System.out.println("Constructor two " + name + " "+ age); 
-    } 
-    Ninja(long id) 
-    { 
-        System.out.println("Constructor three " + id); 
-    } 
-} 
-
-class Student 
-{ 
-    public static void main(String[] args) 
-    {  
-        Ninja geek3 = new Ninja("Dharmesh", 26); 
-    } 
-} 
+Q6.  Check Statements
 ---------------------------------------------------
+Which statement is not true in java language ?
+
 Options
 This problem has only one correct answer:-
-1. Constructor one Dharmesh
-2. Constructor two Dharmesh 26 
-3. Constructor three 26
+1. A public member of a class can be accessed in all the packages in the same project.
+2. A private member of a class cannot be accessed by the methods of the same class. 
+3. A private member of a class cannot be accessed outside the same class.
+4. None of the above.
 
-Solution Description(2)
-The constructor with two arguments string and integer is called.
-
+Solution(2)
