@@ -62,7 +62,7 @@ public class ComplexNumber {
 }
 -----------------------------------------
 
-Create another class: StudentUse
+Create another class: ComplexNumberUse
 ----------------------------------------
 package classes_and_objects;
 
