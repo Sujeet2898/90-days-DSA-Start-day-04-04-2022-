@@ -10,7 +10,7 @@ public class DynamicArray {
     private int data[];
     private int nextIndex;
 
-    public DynamicArray() {
+    public DynamicArray() {      // Constructor
         data = new int[5];
         nextIndex = 0;
     }
@@ -20,10 +20,10 @@ public class DynamicArray {
     }
 
     public void add(int element) {
-        if (nextIndex == data.length) {
+        if (nextIndex == data.length) {  //array is full
             restructure();
         }
-        data[nextIndex] = element;
+        data[nextIndex] = element;    //array has space
         nextIndex++;
     }
 
