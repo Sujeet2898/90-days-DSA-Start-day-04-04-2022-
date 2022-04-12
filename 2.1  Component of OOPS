@@ -1,3 +1,23 @@
+Component of OOPS
+-----------------------
+1.  Encapsulation
+-------------------
+Encapsulation is putting all the datas, all the functions altogether at one place.
+And Abstraction means as long as the inputs and outputs are same, we don't exactly care about what exactly going inside it like how function is working or not, it is just abstracted out for us.
+:- Two benefits firstly Everything at one place and secondly Abstraction. 
+
+----------------------
+2.  Inheritance
+-------------------
+Inheritance means A class can say who is my parent and everything of my parent like properties, functions are inherited to me.
+----------------------
+3.  Polymorphism
+-------------------
+
+*****************************************************
+
+Inheritance Example:
+---------------------
 Create Project: Object Oriented Programming
 
 Create Pakage: vehicle
