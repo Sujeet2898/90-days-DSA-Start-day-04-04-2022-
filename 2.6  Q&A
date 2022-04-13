@@ -1,0 +1,180 @@
+Q1.  What is the output
+-------------------------
+Select the correct output of following code
+Both classes are in same package.
+
+class Vehicle{
+    String color;
+    private int id;
+}
+
+class Car {
+    public static void main(String[] args) {
+        Vehicle v = new Vehicle();
+        v.color = "white";
+        v.id = 101;
+        System.out.println(v.color + " " + v.id);
+    }
+}
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. white 101
+2. Compilation Error 
+3. Runtime error
+4. None
+
+Solution(2)
+
+**************************************
+
+2.  What is the output
+-----------------------
+Select the correct output of following code
+Both classes are in same package.
+
+class Vehicle{
+    private Vehicle(){
+        System.out.println("constructor of Vehicle");
+    }
+}
+
+class Car {
+    public static void main(String[] args) {
+        Vehicle v = new Vehicle();
+    }
+}
+---------------------------------
+Options
+This problem has only one correct answer:-
+1. constructor of Vehicle
+2. No output
+3. Compile time error 
+4. Runtime error
+
+Solution(3)
+
+*********************************
+
+Q3.  What is the output
+---------------------------
+What is the output of the following code?
+Both classes are in same package.
+
+class Vehicle{
+    void print(){
+        System.out.print("Vehicle class");
+    }
+}
+
+class Car extends Vehicle{
+    void print(){
+        System.out.print("Car class");
+    }
+
+    public static void main(String[] args){   
+        Car obj1 = new Car();
+        obj1.print();
+        Vehicle obj2 = new Vehicle();
+        obj2.print();  
+    }
+}
+----------------------------------
+Answer:
+Car classVehicle class
+----------------------
+
+************************************
+
+Q4.. Properties of a class
+---------------------------
+Which variable(s) can the class person access in the following code?
+
+class person{
+    String name;
+    int weight;
+}
+class Student extends person{
+    int roll_number;
+    String school_name;
+}
+--------------------------------
+Options
+This problem may have one or more correct answers:-
+1. name 
+2. weight 
+3. roll_number
+4. school_name
+
+Solution(1,2)
+
+************************************
+
+Q5.  Predict the output
+-------------------------
+What will be the output of the following code?
+
+class Vehicle{
+    String colour;
+    private int number;
+}
+
+class Car extends Vehicle{
+    public static void main(String[] args) {
+        Vehicle v = new Vehicle();
+        v.colour = "black";
+        v.number = 8486;
+        System.out.println(v.number + " " + v.colour);
+    }
+}
+------------------------------
+Options
+This problem has only one correct answer:-
+1. 8486 black
+2. Compile time error 
+3. Run time error
+4. black 8486
+
+Solution(2)
+
+*************************************
+
+Q6.  Predict the output
+-------------------------
+What will be the output of the following code?
+Both the classes are in same package.
+
+class Vehicle{
+    String colour;
+    private int number;
+    void set(int number)
+    {
+        number=number;
+    }
+    int get()
+    {
+        return number;
+    }
+}
+
+class Car extends Vehicle{
+    public static void main(String[] args) {
+        Vehicle v = new Vehicle();
+        v.colour = "white";
+        v.set(1010) ;
+        System.out.println(v.colour + " " + v.get());
+    }
+}
+------------------------------------
+Answer:
+white 0
+-------
+
+***************************************
+
+
+
+
+
+
+
