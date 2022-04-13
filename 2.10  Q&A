@@ -1,0 +1,167 @@
+Q1.  What is the output
+------------------------
+What Is the o/p of following code
+
+class Vehicle {
+    int seats;
+    int speed;
+
+    public Vehicle(int seats, int speed) {
+    System.out.print("Vehicle ");
+    this.seats = seats;
+    this.speed = speed;
+    }
+}
+
+class Car extends Vehicle {
+    int id;
+    Car() {
+    System.out.print("Car ");
+    }
+}
+
+class Main {
+    public static void main(String args[]) {
+    Car c = new Car();
+    }        
+}
+--------------------------------------
+Options
+This problem has only one correct answer:-
+1. Vehicle Car
+2. Car Vehicle
+3. Runtime error
+4. Compilation error 
+
+Solution(4)
+: There is no default constructor available in Vehicle class.
+
+*****************************************
+
+Q2.  What is the output
+------------------------
+What Is The Output
+All classes are in same package.
+
+class Car {
+    private int seats;
+    private int speed;
+
+    public Car() {
+    System.out.print("This Is Car ");
+    }
+}
+
+class Audi extends Car {
+    Audi() {
+    System.out.print("This Is Audi ");
+    super();
+    }
+} 
+
+class Main {
+    public static void main(String args[]) {
+    Audi a = new Audi();
+    }         
+}
+---------------------------------------------
+Options
+This problem has only one correct answer:-
+1. This Is Car This Is Audi
+2. This Is Audi This Is Car
+3. Compilation Error 
+4. Runtime Error
+
+Solution(3)
+: Call to 'super()' must be first statement in constructor body
+
+*************************************************
+
+Q3.  What is the output
+-----------------------
+What is the output.
+All classes are in same package.
+
+class Car {
+    private int seats;
+    private int speed;
+
+    public Car(int seats, int speed) {
+    this.seats = seats;
+    this.speed = speed;
+    System.out.print("This Is Car ");
+    }
+}
+
+class Audi extends Car {
+    Audi(int x, int y) {
+    super(x,y); 
+    System.out.print("This Is Para Audi ");
+    }
+    void Audi() {
+    System.out.print("This Is Def Audi");
+    }
+} 
+
+class Main {
+    public static void main(String args[]) {
+    Audi a = new Audi(5,7);
+    a.Audi();
+    }         
+}
+------------------------------------------
+Answer
+This Is Car This Is Para Audi This Is Def Audi
+----------------------------------------------
+
+***************************************************
+
+Q4.  Predict the output
+-----------------------
+What will be the output of the following code?
+
+class Vehicle{
+    String colour;
+    private int number;
+    void print()
+    {
+        System.out.println("vehicle");
+    }
+}
+
+class Car extends Vehicle{
+    void print()
+    {
+        System.out.println("car");
+    }
+}
+class Honda extends Car{
+    void print()
+    {
+        System.out.println("Honda");
+    }
+}
+class buy_car{
+    public static void main (String[] args) {
+        Car c=new Honda();
+        c.print();
+    }
+}
+----------------------------------------
+Options
+This problem has only one correct answer:-
+1. vehicle
+2. car
+3. Honda 
+4. error
+
+Solution(3)
+
+************************************
+
+
+
+
+
+
+
