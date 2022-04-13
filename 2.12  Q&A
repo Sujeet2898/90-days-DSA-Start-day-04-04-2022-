@@ -1,0 +1,51 @@
+Q1.  Correct statement(s)
+-------------------------
+Select the valid statement(s) on the basis of following code.
+Both classes are in same package.
+
+class Vehicle {}
+class Car extends Vehicle {}
+----------------------------
+Options
+This problem may have one or more correct answers:-
+1. Vehicle obj = new Vehicle(); 
+2. Vehicle obj = new Car(); 
+3. Car obj = new Car(); 
+4. Car obj = new Vehicle();
+
+Solution(1,2,3)
+
+****************************************
+
+Q2.  Fill the output
+---------------------
+What is the output -
+All classes are in same package.
+
+class Vehicle{
+    void print(){
+    System.out.print("Vehicle class");
+    }
+}
+class Car extends Vehicle{
+    void print(){
+    System.out.print("Car class ");
+    }
+}
+
+public class Main {
+    public static void main(String[] args){   
+    Vehicle obj1 = new Car();
+    obj1.print();
+
+    Vehicle obj2 = new Vehicle();
+    obj2.print();  
+    }
+}
+--------------------------
+Answer
+Car class Vehicle class
+-----------------------
+
+******************************************
+
