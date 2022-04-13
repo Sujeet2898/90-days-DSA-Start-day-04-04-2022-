@@ -1,0 +1,144 @@
+Q1.  OOPS components
+-----------------------
+Which of the following is not an OOPS component?
+
+Options
+This problem has only one correct answer:-
+1. Encapsulation
+2. Inheritance
+3. Polymorphism
+4. Aggregation 
+
+Solution(4)
+
+***********************************
+
+Q2.  Correct Statement
+-------------------------------
+Select the correct statement(s).
+
+Options
+This problem may have one or more correct answers:-
+1. Encapsulation is hiding of data from outside world. 
+2. Abstraction means showing only necessary details to the user. 
+3. Inheritance is acquiring properties of other class. 
+4. Java is not an object oriented language.
+
+Solution(1,2,3)
+
+***********************************
+
+Q3.  Keyword
+---------------------
+Which keyword is used to inherit a class?
+
+Options
+This problem has only one correct answer:-
+1. inherits
+2. extends 
+3. imports
+4. None of these
+
+Solution(2)
+
+*************************************
+
+Q4.  Properties of a class
+---------------------------
+Which variable(s) can the class person access in the following code?
+class person{
+    String name;
+    int weight;
+}
+class Student extends person{
+    int roll_number;
+    String school_name;
+}
+-----------------------------
+Options
+This problem may have one or more correct answers:-
+1. name 
+2. weight 
+3.  roll_number
+4. school_name
+
+Solution(1,2)
+
+************************************
+
+Q5.  Valid statements
+-----------------------
+Select the valid statement(s) on the basis of following code.
+Both classes are in same package.
+
+class Vehicle {}
+class Car extends Vehicle {}
+-------------------------------
+Options
+This problem has only one correct answer:-
+1. Class Vehicle is inheriting properties of class Car
+2. Class Car is inheriting properties of class Vehicle 
+3. Both are correct
+4. None
+
+Solution(2)
+
+**********************************
+
+Q6.  What is the output
+------------------------
+What is the value of obj in following code. In other way, if i try to print this, what will be the output -
+
+Car c;
+
+Where Car is a class.
+----------------------
+Options
+This problem has only one correct answer:-
+1. Arbitrary address
+2. null
+3. Error 
+4. None
+
+Solution(3)
+
+******************************
+
+Q7.  What is the output
+-------------------------
+What is the output of the following code?
+Both classes are in same package.
+
+class Vehicle{
+    void print_V(){
+        System.out.print("Vehicle class ");
+    }
+}
+
+class Car extends Vehicle{
+    void print_C(){
+        System.out.print("Car class ");
+    }
+
+    public static void main(String[] args){   
+        Car obj1 = new Car();
+        obj1.print_C();
+        obj1.print_V();  
+    }
+}
+-------------------------------------
+Options
+This problem has only one correct answer:-
+1. Vehicle class Car class
+2. Car class Vehicle class 
+3. Error
+4. None
+
+Solution(2)
+
+****************************************
+
+
+
+
+
