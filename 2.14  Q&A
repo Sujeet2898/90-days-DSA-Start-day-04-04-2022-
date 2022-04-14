@@ -1,0 +1,184 @@
+Q1.  Predict the output
+------------------------
+What will be the output of the following code?
+
+class ExceptionThrown 
+{ 
+    static int divideByZero(int a, int b){ 
+        int i = a/b;  
+        return i; 
+    } 
+    static int computeDivision(int a, int b) { 
+        int res =0; 
+        try
+        { 
+          res = divideByZero(a,b); 
+        } 
+        catch(NumberFormatException ex) 
+        { 
+           System.out.println("Exception occured");  
+        } 
+        return res; 
+    } 
+    public static void main(String args[]){ 
+        int a = 1; 
+        int b = 1; 
+        int i=0;  
+        try
+        { 
+             i = computeDivision(a,b); 
+
+        } 
+        catch(ArithmeticException ex) 
+        { 
+            System.out.println(ex.getMessage()); 
+        }
+        System.out.print(i);
+    } 
+} 
+--------------------------------------------------
+Options
+This problem has only one correct answer:-
+1.  1 
+2. Exception thrown
+3. Runtime error
+4. Compile time error
+
+Solution(1)
+
+************************************************
+
+Q2.  Predict the output
+-----------------------
+What will be the output of the following code?
+
+class ThrowsExecp { 
+static void fun() throws Exception 
+{ 
+    throw new Exception(); 
+} 
+public static void main(String args[]) 
+{   
+    try { 
+        fun(); 
+    } 
+    catch (Exception e) { 
+        System.out.print("caught in main."); 
+    }
+    System.out.print("All is well"); 
+} 
+} 
+------------------------------------
+Answer
+caught in main.All is well
+--------------------------
+
+******************************************
+
+Q3.  Valid Statement
+--------------------
+Select the correct statement -
+
+Options
+This problem has only one correct answer:-
+1. The ‘try’ block should be followed by a ‘catch’ block.
+2. The ‘try’ block should be followed by a ‘finally’ block.
+3. The ‘try’ block should be followed by either a ‘catch’ block or a ‘finally’ block. 
+4. can write independent try block
+
+Solution(3)
+
+******************************************
+
+Q4.  What is the output
+-----------------------
+Select the output of the following program
+
+class A{
+    public static void main(String[] args){
+
+    try{
+        return;
+    }
+    finally{
+        System.out.println("Hello coding ninjas");
+    }
+  }
+}
+-------------------------------
+Options
+This problem has only one correct answer:-
+1. No output
+2. Exception if thrown at run time
+3. Compile time error
+4. Hello coding ninjas 
+
+Solution(4)
+
+*********************************
+
+Q5.  What is the output
+-----------------------
+Select the output of the following program
+
+class A{
+    public static void main(String[] args){
+
+    try{
+       int a = 5/0;
+    }
+    catch(Exception e){
+        System.out.print("Exception caught ");
+    }
+    catch(ArithmeticException e){
+        System.out.print("Arithmetic Exception caught ");
+   }
+   finally{
+       System.out.print("finally block");
+   } 
+ }
+}
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Exception caught
+2. Exception caught Arithmetic Exception caught finally block
+3. Compile time error 
+4. finally block
+
+Solution(3)
+
+*****************************************
+
+Q6.  What is the output
+-------------------------
+Select the output of the following program
+
+class A{
+    public static void A(){
+        System.out.print("Good ");
+        throw new RuntimeException();
+    }
+    public static void B(){
+         A();
+         System.out.print("This ");
+    }
+    public static void main(String[] args){
+        try{
+           B();
+        }
+        catch(Exception e){
+           System.out.print("Time ");
+        }
+        finally{
+           System.out.print("at CodingNinjas");
+        }
+    }
+}
+---------------------------------------
+Answer
+Good Time at CodingNinjas
+-------------------------
+
+**************************************
+
