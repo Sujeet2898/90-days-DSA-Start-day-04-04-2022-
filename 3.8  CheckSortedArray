@@ -11,21 +11,17 @@ public class CheckSorted {
             if(input.length <= 1)	{ //Base	Case
                 return true;
             }
+            if (input[0] > input[1]){
+                return false;
+            }
 
-            int smallInput[] = new int[input.length - 1];                        //Recursive	call
+            int smallInput[] = new int[input.length - 1];      
             for (int i = 1; i < input.length; i++) {
-                smallInput[i - 1] = input[i];              //Recursive	call
+                smallInput[i - 1] = input[i];        // copying n - 1 part except first part of n  
             }
 
-            boolean smallAns = checkSorted(smallInput);   //Small	Calculation and	return	statement
-            if (!smallAns){
-                return false;
-            }
-            if (input[0] <= input[1]){
-                return true;
-            } else {
-                return false;
-            }
+            boolean smallAns = checkSorted(smallInput);   //Small Calculation and return	statement
+            return smallAns;
         }
 
         public static void main(String[] args) {
@@ -33,5 +29,6 @@ public class CheckSorted {
             System.out.println(checkSorted(input));
         }
 }
+--------------------
 Output:
 true
