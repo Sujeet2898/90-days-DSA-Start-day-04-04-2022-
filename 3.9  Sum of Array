@@ -47,3 +47,83 @@ Output:
 11
 
 ****************************************
+
+Create Project: Recursion
+
+Create Package: Default
+
+Create class: SumOfArray
+-----------------------------------------
+
+import java.util.Scanner;
+
+public class SumOfArray {
+
+    public static int sum(int input[], int startIndex) {
+        if (startIndex == input.length) {
+            return 0;
+        }
+        return input[startIndex] + sum(input, startIndex + 1);
+    }
+    public static int sum(int input[]) {
+        return sum(input, 0);
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int input[] = new int[n];
+        for(int i = 0; i < n; i++) {
+            input[i] = s.nextInt();
+        }
+        System.out.println(sum(input));
+    }
+}
+--------------------
+Input:
+3
+4 5 2
+
+Output:
+11
+
+****************************************************
+
+Create Project: WithoutRecursion
+
+Create Package: Default
+
+Create class: SumOfArray
+-----------------------------------------
+import java.util.Scanner;
+
+public class SumOfArray{
+    public static int sum(int input[]) {
+        
+        int sum = 0; // initialize sum
+        int i;
+
+        // Iterate through all elements and add them to sum
+        for (i = 0; i < input.length; i++)
+            sum +=  input[i];
+
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int input[] = new int[n];
+        for(int i = 0; i < n; i++) {
+            input[i] = s.nextInt();
+        }
+        System.out.println(sum(input));
+    }
+}
+Input:
+3
+4 5 2
+
+Output:
+11
+
