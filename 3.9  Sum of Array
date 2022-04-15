@@ -22,7 +22,7 @@ import java.util.Scanner;
 
 public class SumOfArray {
 
-    public static int sum(int input[], int startIndex) {
+    private static int sum(int input[], int startIndex) {
         if (startIndex == input.length) {
             return 0;
         }
