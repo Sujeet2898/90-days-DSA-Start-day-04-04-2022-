@@ -1,3 +1,14 @@
+Check Palindrome (recursive)
+----------------------------
+Check whether a given String S is a palindrome using recursion. Return true or false.
+
+Input Format :
+String S
+
+Output Format :
+'true' or 'false'
+---------------------
+
 Create Project: Recursion
 
 Create Package: Default
