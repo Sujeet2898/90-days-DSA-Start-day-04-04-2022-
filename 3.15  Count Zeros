@@ -1,3 +1,14 @@
+Count Zeros
+------------
+Given an integer N, count and return the number of zeros that are present in the given integer using recursion.
+
+Input Format :
+Integer N
+
+Output Format :
+Number of zeros in N
+-----------------------------
+
 Create Project: Recursion
 
 Create Package: Default
