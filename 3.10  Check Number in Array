@@ -23,7 +23,7 @@ import java.util.Scanner;
 
 public class CheckNumberInArray {
 
-    public static boolean checkNumber(int input[], int x, int startIndex){
+    private static boolean checkNumber(int input[], int x, int startIndex){
         if (startIndex == input.length){
             return false;
         }
