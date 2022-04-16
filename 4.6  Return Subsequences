@@ -45,8 +45,8 @@ xyz
 
 Output:
        // first one is empty string
-z      // this is second one
-y
+z      // this is second 
+y      // and so on....
 yz
 x
 xz
