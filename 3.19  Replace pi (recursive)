@@ -8,11 +8,11 @@ Create Project: Recursion
 
 Create Package: Default
 
-Create class: SumOfArray
+Create class: ReplacePi
 -----------------------------------------
 
 import java.util.*;
-public class Solution{
+public class ReplacePi{
 
     public static String replace(String input){
         if (input.length() <= 1) {
