@@ -1,0 +1,28 @@
+Q1. Merge Sort space
+---------------------
+The space complexity for merge sort is :
+
+Options
+This problem has only one correct answer:-
+1. O(n) 
+2. O(n^2)
+3. O(nlogn)
+4. O(log n)
+
+Solution(1)
+
+*************************
+
+Q2. Fibonacci
+---------------
+The space complexity for finding nth fibonacci number using recursion is :
+
+Options
+This problem has only one correct answer:-
+1. O(n) 
+2. O(2^n)
+3. O(log n)
+4. O(n^2)
+5. O(nlogn)
+
+Solution(1)
