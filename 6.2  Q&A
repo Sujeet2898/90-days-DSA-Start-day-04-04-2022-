@@ -1,0 +1,70 @@
+Q1.  What is time complexity
+----------------------------
+What is the time complexity of following code ?
+int multiplyRec(int m, int n){
+    if(n == 1)
+        return m;
+    return m + multiplyRec(m,  n - 1);  
+}
+-------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(m*n)
+2. O(n) 
+3. O(n^2)
+4. O(m)
+
+Solution(2)
+
+***************************************
+
+Q2.  What is time complexity
+----------------------------
+What is the time complexity of following code ?
+int sumOfDigits(int n){
+        int sum;
+        if(n < 10){
+            return n;
+        }
+        sum = (n % 10) + sumOfDigits(n / 10);
+        return sum;
+}
+---------------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(logn) - log is to the base 10 
+2. O(n)
+3. O(n^2)
+4. None of these
+
+Solution(1)
+
+******************************************
+
+Q3.  Fibonacci
+--------------
+What is the time complexity of following code for calculating nth fibonacci number
+long fib(int n){
+    if(n == 0 || n == 1){
+         return n;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+---------------------------------
+Options
+This problem has only one correct answer:-
+1. O(n)
+2. O(n^2)
+3. O(2^n) 
+4. O(n^3)
+
+Solution(3)
+
+
+
+
+
+
+
+
+
