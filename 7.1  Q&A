@@ -1,0 +1,78 @@
+Q1.  Final constructor
+----------------------
+Can we declare constructors as final?
+
+Options
+This problem has only one correct answer:-
+1. Yes
+2. No 
+
+Solution(2)
+
+**************************
+
+Q2.  What is the output
+-----------------------
+class Base {
+    public final void show() {
+        System.out.println("Base show");
+    }
+}
+class Derived extends Base {
+    public void show() { 
+        System.out.println("Derived show");
+    }
+}
+public class Solution {
+    public static void main(String[] args) {
+        Base b = new Derived();
+        b.show();
+    }
+}
+-------------------------------
+Options
+This problem has only one correct answer:-
+1. Base show
+2. Derived show
+3. Compilation error 
+4. None
+
+Solution(3)
+
+*******************************
+
+Q3.  Prevent inheritance
+-------------------------
+Which of these keywords can be used to prevent inheritance of a class?
+
+Options
+This problem has only one correct answer:-
+1. super
+2. final 
+3. constant
+4. none
+
+Solution(2)
+
+**************************************
+
+Q4.  Final class
+----------------
+Final class means -
+
+Options
+This problem has only one correct answer:-
+1. It cannot have non-final members
+2. It cannot be extended 
+3. Its objects cannot be created
+4. All
+
+Solution(2)
+
+
+
+
+
+
+
+
