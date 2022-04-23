@@ -1,0 +1,95 @@
+Q1.  What is the output
+-----------------------
+abstract class A {
+    int i;
+    abstract void display();
+}   
+class B extends A {
+    int j;
+    void display() {
+        System.out.println(j);
+    }
+}   
+class Main {
+    public static void main(String args[])
+    {
+        B obj = new B();
+        obj.j=2;
+        obj.display();   
+    }
+}
+-------------------
+Options
+This problem has only one correct answer:-
+1. 0
+2. 2 
+3. Compilation Error
+4. Runtime Error
+
+Solution(2)
+
+****************************
+
+Q2.  Correct Statement
+----------------------
+Chose the correct statement for the code given below -
+public class Student{
+    public abstract double numberOfStudent();
+}
+---------------------------
+Options
+This problem has only one correct answer:-
+1. The keywords public and abstract cannot be used together.
+2. The method numberOfStudent() in class Student must have a body.
+3. You must add a return statement in method numberOfStudent().
+4. Class Student must be defined abstract. 
+
+Solution(4)
+
+************************
+
+Q3.  Abstract method
+--------------------
+Which of the following declares an abstract method in an abstract Java class?
+
+Options
+This problem has only one correct answer:-
+1. public abstract method();
+2. public abstract void method(); 
+3. public void abstract Method();
+4. public void method() {}
+
+Solution(2)
+
+**********************************
+
+Q4.  Incorrect Statement
+------------------------
+Which one of the following is not true?
+
+Options
+This problem has only one correct answer:-
+1. A class containing abstract methods is called an abstract class.
+2. Abstract methods should be implemented in the non-abstract derived class.
+3. An abstract class cannot have non-abstract methods 
+4. None of the above.
+
+Solution(3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
