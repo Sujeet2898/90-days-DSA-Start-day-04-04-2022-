@@ -1,0 +1,94 @@
+Q1.  Collection class for Dynamic array
+---------------------------------------
+Which of these standard collection classes implements a dynamic array?
+
+Options
+This problem has only one correct answer:-
+1. AbstractList
+2. AbstractSet
+3. Arraylist
+4. ArrayList 
+
+Solution(4)
+
+*******************************
+
+Q2.  Size of ArrayList
+----------------------
+Which of these method of ArrayList class is used to obtain present size of an ArrayList object?
+
+Options
+This problem has only one correct answer:-
+1. length()
+2. size() 
+3. capacity()
+4. index()
+
+Solution(2)
+
+*********************************
+
+Q3.  ArrayList of Integers
+--------------------------
+Which of the following declarations would be correct for a list that will contain Integers?
+
+Options
+This problem has only one correct answer:-
+1. ArrayList<String> list = new ArrayList<String>() ;
+2. ArrayList<int> list = new ArrayList<int>() ;
+3. ArrayList list = new ArrayList() ;
+4. ArrayList<Integer> list = new ArrayList<Integer>() ; 
+
+Solution(4)
+
+********************************
+
+Q4.  Figure out the element
+---------------------------
+Consider the following code:
+
+ArrayList<String> list = new ArrayList<String>() ;
+list.add( "apple" );
+list.add( "banana" );
+list.add( "carrot" );
+list.add( 0, "mango" );
+What element will be at index 2 of the list?
+
+-----------------
+Answer:-
+banana
+------
+
+***************************
+
+Q5.  Figure out the correct statement
+-------------------------------------
+Consider the following code:
+
+ArrayList<String> list = new ArrayList<String>() ;
+list.add( "Ant" );
+list.add( "Bat" );
+list.add( "Car" );
+list.add( "Door" );
+list.add( "Euro" );
+Which of the following statements will replace the element "Car" with "Bus" ?
+-----------------------------------
+Options
+This problem has only one correct answer:-
+1. list[2] = "Bus" ;
+2. list.add( "Bus", list.indexOf("Car") );
+3. list.set( 2, "Bus" ); 
+4. list.set( "Bus", "Car" );
+----------------------
+
+Solution(3)
+
+****************************
+
+
+
+
+
+
+
+
