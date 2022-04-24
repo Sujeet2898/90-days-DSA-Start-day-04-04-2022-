@@ -1,0 +1,14 @@
+Q.  Linked List Use Case
+------------------------
+Linked List are best suited:
+
+Options
+This problem has only one correct answer:-
+1. for relatively permanent collections of data.
+2. for the size of the structure is constantly changing. 
+3. for random Access of elements
+4. None of these
+
+Solution(2)
+
+*****************
