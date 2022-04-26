@@ -9,28 +9,32 @@ If the given position 'i',  is greater than the length of the given singly linke
 -------------------------------
 Solution:
 ----------
+import java.util.Scanner;
 
-/*
+public class LinkedListUse {
 
- 	Following is the Node class already written for the Linked List
+    public static Node<Integer> takeInput(){
+        Node<Integer> head = null, tail= null;
+        Scanner s = new Scanner(System.in);
+        int data = s.nextInt();
 
-	class LinkedListNode<T> {
-		T data;
-		LinkedListNode<T> next;
+        while (data != -1){
+            Node<Integer> newNode = new Node<Integer>(data);
+            if (head == null){
+                head = newNode;
+                tail = newNode;
+            }else{
+                tail.next = newNode;
+                tail = newNode;   // Or tail = tail.next;
+            }
+            data = s.nextInt();
+        }
+        return head;
+    }
 
-		public Node(T data) {
-			this.data = data;
-		}
-	}
-
-*/
-
-public class Solution {
-
-	public static void printIthNode(LinkedListNode<Integer> head, int i){
-		//Your code goes here
+    public static void printIthNode(Node<Integer> head, int i){
         int count = 0;
-        LinkedListNode<Integer> temp = head;
+        Node<Integer> temp = head;
         while (temp != null && count < i){
             count++;
             temp = temp.next;
@@ -38,5 +42,18 @@ public class Solution {
         if (temp != null){
             System.out.println(temp.data);
         }
-	}
+    }
+
+    public static void main(String args[]){
+        Node<Integer> head = takeInput();
+        printIthNode(head, 5);
+    }
 }
+------------------------------
+Input:
+10 20 30 40 50 60 70 -1
+
+Output:
+60
+
+******************************
