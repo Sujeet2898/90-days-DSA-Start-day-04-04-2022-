@@ -2,6 +2,20 @@ Create Project: LinkedList
 
 Create Package: default
 
+Create class: Node
+-------------------
+public class Node<T> {
+
+    T data;
+    Node<T> next;
+
+    Node(T data){
+        this.data = data;
+        next = null;
+    }
+}
+--------------------------
+
 Create class: LinkedListUse
 ---------------------------
 public class LinkedListUse {
