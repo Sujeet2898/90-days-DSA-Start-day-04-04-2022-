@@ -6,6 +6,8 @@ To explain it further, you need to start printing the data from the tail and mov
 Note :
 You can’t change any of the pointers in the linked list, just print it in the reverse order.
 -------------------------------
+Solution:
+----------
 Create Project: LinkedList
 
 Create Package: default
@@ -26,8 +28,6 @@ public class Node<T> {
 
 Create class: LinkedListUse
 ---------------------------
-Solution:
-----------
 import java.util.Scanner;
 
 public class LinkedListUse {
