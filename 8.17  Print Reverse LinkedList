@@ -6,6 +6,26 @@ To explain it further, you need to start printing the data from the tail and mov
 Note :
 You can’t change any of the pointers in the linked list, just print it in the reverse order.
 -------------------------------
+Create Project: LinkedList
+
+Create Package: default
+
+Create class: Node
+-------------------
+public class Node<T> {
+
+    T data;
+    Node<T> next;
+
+    Node(T data){
+        this.data = data;
+        next = null;
+    }
+}
+--------------------------
+
+Create class: LinkedListUse
+---------------------------
 Solution:
 ----------
 import java.util.Scanner;
