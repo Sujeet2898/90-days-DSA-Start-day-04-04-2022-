@@ -1,0 +1,98 @@
+Q.  Palindrome LinkedList
+-------------------------
+You have been given a head to a singly linked list of integers. Write a function check to whether the list given is a 'Palindrome' or not.
+-----------------------
+Solution:
+--------------
+Create Project: LinkedList
+
+Create Package: default
+
+Create class: Node
+-------------------
+public class Node<T> {
+
+    T data;
+    Node<T> next;
+
+    Node(T data){
+        this.data = data;
+        next = null;
+    }
+}
+--------------------------
+
+Create class: LinkedListUse
+---------------------------
+import java.util.Scanner;
+
+public class LinkedListUse {
+
+    public static Node<Integer> takeInput(){
+        Node<Integer> head = null, tail= null;
+        Scanner s = new Scanner(System.in);
+        int data = s.nextInt();
+
+        while (data != -1){
+            Node<Integer> newNode = new Node<Integer>(data);
+            if (head == null){
+                head = newNode;
+                tail = newNode;
+            }else{
+                tail.next = newNode;
+                tail = newNode;   // Or tail = tail.next;
+            }
+            data = s.nextInt();
+        }
+        return head;
+    }
+
+    public static boolean isPalindrome(Node<Integer> head) {
+        Node<Integer> middle=head,fast=head;
+        while(fast.next!=null && fast.next.next!=null){
+            middle=middle.next;
+            fast=fast.next.next;
+        }
+        Node<Integer> curr=middle.next,next=null,prev=null;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            prev=curr;
+            curr=next;
+        }
+        middle.next=prev;
+        curr=middle.next;
+        while(curr!=null){
+            if(curr.data!=head.data)
+                return false;
+            head=head.next;
+            curr=curr.next;
+        }
+        return true;
+    }
+
+    public static void main(String args[]){
+        Node<Integer> head = takeInput();
+        System.out.println(isPalindrome(head));
+    }
+}
+-----------------------
+Input:
+10 20 10 -1
+
+Output:
+true
+------
+Input:
+10 -1
+
+Output:
+true
+-------
+Input:
+10 20 30 -1
+
+Output:
+false
+
+
