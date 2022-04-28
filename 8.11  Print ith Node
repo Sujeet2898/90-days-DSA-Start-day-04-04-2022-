@@ -7,6 +7,8 @@ Assume that the Indexing for the singly linked list always starts from 0.
 
 If the given position 'i',  is greater than the length of the given singly linked list, then don't print anything.
 -------------------------------
+Solution:
+----------
 Create Project: LinkedList
 
 Create Package: default
@@ -27,8 +29,6 @@ public class Node<T> {
 
 Create class: LinkedListUse
 ---------------------------
-Solution:
-----------
 import java.util.Scanner;
 
 public class LinkedListUse {
