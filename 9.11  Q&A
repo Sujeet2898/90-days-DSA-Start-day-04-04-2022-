@@ -1,0 +1,121 @@
+Q1.  Concat LL
+---------------
+The concatenation of two lists is to be performed in O(1) time. Which of the following implementations of a list should be used?
+
+------------------
+Options
+This problem has only one correct answer:-
+1. Singly Linked List
+2. Doubly Linked List
+3. Circular Doubly Linked List 
+4. Circular Linked List
+
+Solution Description(3)
+Singly linked list cannot be answer because we cannot find last element of a singly linked list in O(1) time. Doubly linked list cannot also not be answer because of the same reason as singly linked list.
+
+***********************************
+
+Q2.  Circular doubly LL
+------------------------
+Given an unsorted circular doubly linked list, suppose you have reference (or pointer) to its head node only, which of the following operation can be implemented in O(1) time?
+i) Insertion at the front of the linked list
+ii) Insertion at the end of the linked list
+iii) Deletion of the last node of the linked list
+iv) Deletion of the front node of the linked list
+
+------------------
+Options
+This problem has only one correct answer:-
+1. I and II
+2. I,II and III
+3. I,II,III and IV 
+4. None
+
+Solution(3)
+
+***********************
+
+Q3.  Traversal in LL
+---------------------
+In doubly linked lists, traversal can be done in ?
+
+------------------
+Options
+This problem has only one correct answer:-
+1. Only forward direction
+2. Only reverse direction
+3. Both directions 
+4. None of the above
+
+Solution(3)
+
+********************
+Q4.  Double LL
+--------------
+Given an unsorted doubly Linked List, suppose you have references (or pointer) to its head and tail nodes, which of the following operation can be implemented in O(1) time ?
+i) Insertion at the front of the linked list
+ii) Insertion at the end of the linked list
+iii) Deletion of the last node of the linked list
+iv) Deletion of the front node of the linked list
+
+-------------------
+Options
+This problem has only one correct answer:-
+1. I and II
+2. I and III
+3. I,II and III
+4. I,II, III and IV 
+
+Solution(4)
+
+******************************
+
+Q5.  Circular LL
+-----------------
+Given an unsorted circular linked list, suppose you have reference (or pointer) to its head node only, which of the following operation can be implemented in O(1) time?
+i) Insertion at the front of the linked list
+ii) Insertion at the end of the linked list
+iii) Deletion of the last node of the linked list
+iv) Deletion of the front node of the linked list
+
+----------------------
+
+Options
+This problem has only one correct answer:-
+1. I and II
+2. I and III
+3. I,II and III
+4. None 
+
+Solution(4)
+
+
+************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
