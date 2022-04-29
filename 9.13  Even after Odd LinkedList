@@ -1,0 +1,145 @@
+Q.  Even after Odd LinkedList
+-----------------------------
+For a given singly linked list of integers, arrange the elements such that all the even numbers are placed after the odd numbers. The relative order of the odd and even terms should remain unchanged.
+
+---------------------------------
+Solution:
+---------------
+Create Project: LinkedList
+
+Create Package: default
+
+Create class: Node
+-------------------
+public class Node<T> {
+
+    T data;
+    Node<T> next;
+
+    Node(T data){
+        this.data = data;
+        next = null;
+    }
+}
+--------------------------
+
+Create class: LinkedListUse
+---------------------------
+import java.util.Scanner;
+
+public class LinkedListUse {
+
+    public static Node<Integer> takeInput(){
+        Node<Integer> head = null, tail= null;
+        Scanner s = new Scanner(System.in);
+        int data = s.nextInt();
+
+        while (data != -1){
+            Node<Integer> newNode = new Node<Integer>(data);
+            if (head == null){
+                head = newNode;
+                tail = newNode;
+            }else{
+                tail.next = newNode;
+                tail = newNode;   // Or tail = tail.next;
+            }
+            data = s.nextInt();
+        }
+        return head;
+    }
+
+    public static void print(Node<Integer> head){
+
+        while(head != null){
+            System.out.print(head.data +" ");
+            head = head.next;
+        }
+    }
+
+    public static Node<Integer> evenAfterOdd(Node<Integer> head) {
+        //Your code goes here
+        if (head==null || head.next==null)
+        {
+            return head;
+        }
+        Node<Integer> temp=head,oddH=null,oddT=null,evenH=null,evenT=null;
+        while(temp!=null)
+        {
+            int data=temp.data;
+            //System.out.println(data);
+
+            if (data%2==0)
+            {
+                //System.out.println(data+" is divisble by 2");
+                if (evenT==null)
+                {
+                    //System.out.println("Adding first node");
+                    evenT=temp;
+                    evenH=temp;
+                }
+                else
+                {
+                    evenT.next=temp;
+                    evenT=evenT.next;
+                }
+                //System.out.println("Even numbers");
+                //Runner.print(evenHead);
+
+            }
+            else
+            {
+                //System.out.println(data+" is not divisble by 2");
+                if (oddT==null)
+                {
+                    //System.out.println("Adding first node");
+                    oddT=temp;
+                    oddH=temp;
+                }
+                else
+                {
+                    oddT.next=temp;
+                    oddT=oddT.next;
+                }
+                //System.out.println("Odd numbers");
+                //Runner.print(oddHead);
+
+            }
+
+            //System.out.println();
+            temp=temp.next;
+        }
+        //Runner.print(oddHead);
+        //Runner.print(evenHead);
+        if (oddH==null)
+        {
+            return evenH;
+        }
+        else
+        {
+            oddT.next=evenH;
+        }
+
+        if (evenT!=null)
+        {
+            evenT.next=null;
+        }
+
+
+        return oddH;
+    }
+
+
+    public static void main(String args[]){
+        Node<Integer> head = takeInput();
+        head = evenAfterOdd(head);
+        print(head);
+    }
+}
+---------------------------------
+Input:
+1 2 3 4 5 6 7 -1
+
+Output:
+1 3 5 7 2 4 6
+
+***************************
