@@ -1,0 +1,29 @@
+Q1.  Index problem
+------------------
+Suppose we have 10 chairs(numbered 1 to 10 from top to bottom) placed on top of each other, now we remove the top 5 chairs and from the remaining 5 ,we again remove 2 chairs and place the previous 5 chairs back. Which numbered chair is at 6th position from the bottom?
+
+Options
+This problem has only one correct answer:-
+1. 2
+2. 3 
+3. 6
+4. 8
+
+Solution Description(2)
+The removed chairs are number 6 and 7.
+Now the seven chairs are in order 1 2 3 4 5 8 9 10(from top to bottom).
+
+**************************
+
+Q2.  Stack
+----------
+What method is used in implementation of stacks?
+
+Options
+This problem has only one correct answer:-
+1. First in First out
+2. Last in First out 
+
+Solution(2)
+
+************************
