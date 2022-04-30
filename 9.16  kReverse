@@ -58,8 +58,8 @@ public class LinkedListUse {
     }
 
     public static Node<Integer> reverse(Node<Integer> head, int k) {
-        if(head == null) {
-            return null;
+         if(head == null || k == 0 || k == 1) {
+            return head;
         }
 
         Node<Integer> current = head;
