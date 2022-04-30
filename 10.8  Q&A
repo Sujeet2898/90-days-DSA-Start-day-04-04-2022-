@@ -1,0 +1,40 @@
+Q1.  LL Stacks
+---------------
+Which of the following is true about linked list implementation of stack?
+(A) In push operation, if new nodes are inserted at the beginning of linked list, then in pop operation, nodes must be removed from end.
+(B) In push operation, if new nodes are inserted at the end, then in pop operation, nodes must be removed from the beginning.
+
+---------------
+Options
+This problem has only one correct answer:-
+1. a
+2. b
+3. both a and b
+4. None 
+
+Solution(4)
+Explanation: To keep the Last In First Out order, a stack can be implemented using linked list in two ways:
+a) In push operation, if new nodes are inserted at the beginning of linked list, then in pop operation, nodes must be removed from beginning.
+b) In push operation, if new nodes are inserted at the end of linked list, then in pop operation, nodes must be removed from end.
+
+****************************
+
+Q2.   Time Complexity
+---------------------
+What would be the time complexity of the push and pop operations of the stack implemented using linked list (Assuming stack is implemented efficiently)?
+
+Options
+This problem has only one correct answer:-
+1. O(1) for insertion and O(n) for deletion
+2. O(1) for insertion and O(1) for deletion 
+3. O(n) for insertion and O(n) for deletion
+4. O(n) for insertion and O(1) for deletion
+
+Solution(2)
+
+***************************
+
+
+
+
+
