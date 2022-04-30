@@ -1,0 +1,115 @@
+Q.  Swap two Nodes of LL
+-------------------------
+You have been given a singly linked list of integers along with two integers, 'i,' and 'j.' Swap the nodes that are present at the 'i-th' and 'j-th' positions.
+-------------------------
+
+Solution:
+---------------
+Create Project: LinkedList
+
+Create Package: default
+
+Create class: Node
+-------------------
+public class Node<T> {
+
+    T data;
+    Node<T> next;
+
+    Node(T data){
+        this.data = data;
+        next = null;
+    }
+}
+--------------------------
+
+Create class: LinkedListUse
+---------------------------
+import java.util.Scanner;
+
+public class LinkedListUse {
+
+    public static Node<Integer> takeInput(){
+        Node<Integer> head = null, tail= null;
+        Scanner s = new Scanner(System.in);
+        int data = s.nextInt();
+
+        while (data != -1){
+            Node<Integer> newNode = new Node<Integer>(data);
+            if (head == null){
+                head = newNode;
+                tail = newNode;
+            }else{
+                tail.next = newNode;
+                tail = newNode;   // Or tail = tail.next;
+            }
+            data = s.nextInt();
+        }
+        return head;
+    }
+
+    public static void print(Node<Integer> head){
+
+        while(head != null){
+            System.out.print(head.data +" ");
+            head = head.next;
+        }
+    }
+
+    public static Node<Integer> swapNodes(Node<Integer> head, int i, int j){
+        if (i == j){
+            return head;
+        }
+
+        Node<Integer> temp = head, tempP = null;
+        Node<Integer> P1 = null, C1 = null, P2 = null, C2 = null;
+
+        int pos = 0;
+
+        while (temp != null){
+            if (pos == i){
+                P1 = tempP;
+                C1 = temp;
+            } else if (pos == j){
+                P2 = tempP;
+                C2 = temp;
+            }
+            tempP = temp;
+            temp = temp.next;
+            pos ++;
+        }
+
+        if (P1 != null){
+            P1.next = C2;
+        }else {
+            head = C2;
+        }
+
+        if (P2 != null){
+            P2.next = C1;
+        }else{
+            head = C1;
+        }
+
+        Node<Integer> CurrentC1 = C2.next;
+        C2.next = C1.next;
+        C1.next = CurrentC1;
+
+        return head;
+    }
+
+    public static void main(String args[]){
+        Node<Integer> head = takeInput();
+        head = swapNodes(head,1,3);
+        print(head);
+    }
+}
+---------------------------------
+Input:
+1 2 3 4 5 6 7 -1
+
+Output:
+1 4 3 2 5 6 7
+
+
+******************************
