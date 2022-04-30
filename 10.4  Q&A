@@ -1,0 +1,68 @@
+Q1. Correct Statement
+----------------------
+Which of the following statement(s) about stack data structure is/are NOT correct?
+
+Options
+This problem may have one or more correct answers:
+1. Stack data structure can be implemented using linked list
+2. New node can only be added at the top of the stack
+3. Stack is the FIFO data structure 
+4. New node can be added at both ends 
+
+Solution(3,4)
+
+******************************
+
+Q2. Stack Implementation
+----------------------------
+Which of the following operation take worst case i.e. linear time (O(n)) in the array implementation of stack?
+
+Options
+This problem has only one correct answer:-
+1. Push
+2. Pop
+3. IsEmpty
+4. None 
+
+Solution(4)
+
+*****************************
+
+Q3. Stack Implementation
+-----------------------------
+What would be the output for the following functions if the size of array used in stack is 5 ?
+1. push(5)
+2. push(4)
+3. push(3)
+4. push (2)
+5. pop()
+6. push(6)
+7. push(8)
+8. push(9)
+9. print(size())  //to print the size of stack
+-------------------------
+Options
+This problem has only one correct answer:-
+1. 6
+2. 5
+3. StackFullException at line 8 
+4. StackFullException at line 7
+
+Solution(3)
+
+**************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
