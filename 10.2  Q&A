@@ -1,0 +1,55 @@
+Q1. Size of Stack
+------------------
+Given an empty Stack and we perform following functions on the stack:
+1. push(5)
+2. push(3)
+3. push(4)
+4. pop()
+5. push(2)
+What is the size of stack now?
+--------------
+Answer:-
+3
+--
+Solution Description:
+The final stack is 5 3 2.(2 is at the top)
+
+*********************
+
+Q2.  Sum of Stack
+------------------
+What would be the sum of elements of Stack after performing following functions:
+1. push(5)
+2. push(3)
+3. push(4)
+4. pop()
+5. push(2)
+-----------
+Answer
+10
+--
+
+********************
+
+Q3.  Size Function
+------------------
+What should be the return type of size function in stack?
+
+Options
+This problem has only one correct answer:-
+1. float
+2. double
+3. char
+4. int 
+
+Solution(4)
+
+**************************
+
+
+
+
+
+
+
+
