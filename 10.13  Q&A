@@ -1,0 +1,100 @@
+Q1. Predict the Output
+------------------------
+What would be the output of the following code?
+
+import java.util.Stack;
+class Test {
+    public static void main (String[] args) {
+        Stack<Integer> stack=new Stack<Integer>();
+        stack.push(5);
+        stack.push(10);
+        stack.push(15);
+        System.out.print(stack.pop()+stack.size());
+    }
+}
+----------------------
+Answer:
+17
+--
+
+*****************
+Q2. Predict the Output
+----------------------
+What would be the output of the following code?
+
+import java.util.Stack;
+class Test {
+    public static void main (String[] args) {
+        Stack<Integer> stack=new Stack<Integer>();
+        for(int i=0;i<10;i++)
+        {
+            stack.push(i*2);
+        }
+        System.out.print(stack.peek());
+    }
+}
+---------------------
+Options
+This problem has only one correct answer:
+1. 0
+2. 16
+3. 18 
+4. 20
+
+Solution(3)
+
+*******************
+Q3. Predict the Output
+----------------------
+Find the output of the code :
+    
+   public static void main (String[] args) {
+    int a=50,b=20;
+    if(a>b)
+    {
+        if(a>100)
+            System.out.println("Ace");
+        if(b<100)
+            b=50;
+    }
+    else if(a==b)
+    {
+        System.out.println("King");
+    }
+    else 
+    {
+        System.out.println("Queen");
+    }
+}
+----------------------
+Options
+This problem has only one correct answer:-
+1. No output 
+2. King
+3. Queen
+4. Ace
+
+Solution Description(1)
+(a>b) is true,So we go inside the if.
+(a>100) is false.
+(b<100) is true,so it is executed and b is updated to 50.
+But no print statement is executed hence no output.
+
+************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
