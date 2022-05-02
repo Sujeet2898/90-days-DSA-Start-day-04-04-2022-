@@ -1,0 +1,234 @@
+Q1.  Function
+----------------
+Consider the following pseudo code. Assume that IntQueue is an integer queue. What does the function fun do?
+
+void fun(int n)
+{
+    IntQueue q = new IntQueue();
+    q.enqueue(0);
+    q.enqueue(1);
+    for (int i = 0; i < n; i++)
+    {
+        int a = q.dequeue();
+        int b = q.dequeue();
+        q.enqueue(b);
+        q.enqueue(a + b);
+        System.out.print(a);
+    }
+}
+-------------------
+Options
+This problem has only one correct answer:-
+1. Print numbers 0 to n-1
+2. Print numbers n-1 to 0
+3. Print first n fibonacci numbers 
+4. Print first n fibonacci numbers in reverse
+
+Solution(3)
+
+++++++++++++++++++++++++++++++++++++++++
+Create Project: Queue
+
+Create Package: default
+
+Create class: QueueUsingArray
+----------------------------------------------
+public class QueueUsingArray {
+
+    private int data[];
+    private int front; // index at which front element is stored
+    private int rear;  // index at which rear element is stored
+    int size;
+
+    public QueueUsingArray(){   // constructor
+        data = new int[10];
+        front = -1;
+        rear = -1;
+        size = 0;
+    }
+
+    public QueueUsingArray(int capacity){
+        data = new int[capacity];
+        front = -1;
+        rear = -1;
+        size = 0;
+    }
+
+    int size(){
+        return size;
+    }
+
+    boolean isEmpty(){
+        return size == 0;
+    }
+
+    int front() throws QueueEmptyException {
+        if (size == 0){
+            throw new QueueEmptyException();
+        }
+        return data[front];
+    }
+
+    void enqueue(int element) throws QueueFullException {
+
+        if (size == data.length){
+            throw new QueueFullException();
+        }
+
+        if (size == 0){
+            front = 0;
+        }
+
+        size++;
+
+        rear = (rear + 1) % data.length;  // circular queue
+//        OR
+//        rear++;
+//        if (rear == data.length){    // circular queue
+//            rear = 0;
+//        }
+
+        data[rear] = element;
+    }
+
+    int dequeue() throws QueueEmptyException {
+        if (size == 0){
+            throw new QueueEmptyException();
+        }
+        int temp = data[front];
+
+        front = (front + 1) % data.length;
+//        front++;
+//        if (front == data.length){
+//            front = 0;
+//        }
+        size--;
+        if (size == 0){
+            front = -1;
+            rear = -1;
+        }
+        return temp;
+    }
+
+}
+------------------------------------------------------
+Create other class: QueueFullException
+----------------------------------------------
+public class QueueFullException extends Exception{
+    /**
+     *
+     */
+    private static final long serialVersionUID = 7710094946748781333L;
+}
+-----------------------------------------------
+Create other class: QueueEmptyException
+----------------------------------------------
+public class QueueEmptyException extends Exception{
+    /**
+     *
+     */
+    private static final long serialVersionUID = 7710094946748781333L;
+}
+---------------------------------------------
+
+Create other class: QueueUse
+----------------------------------------------
+public class QueueUse {
+
+    public static void main(String[] args){
+        QueueUsingArray q= new QueueUsingArray();
+        try {
+            q.enqueue(0);
+        } catch (QueueFullException e) {
+            e.printStackTrace();
+        }
+        try {
+            q.enqueue(1);
+        } catch (QueueFullException e) {
+            e.printStackTrace();
+        }
+        for (int i = 0; i < 8; i++)
+        {
+            int a = 0;
+            try {
+                a = q.dequeue();
+            } catch (QueueEmptyException e) {
+                e.printStackTrace();
+            }
+            int b = 0;
+            try {
+                b = q.dequeue();
+            } catch (QueueEmptyException e) {
+                e.printStackTrace();
+            }
+            try {
+                q.enqueue(b);
+            } catch (QueueFullException e) {
+                e.printStackTrace();
+            }
+            try {
+                q.enqueue(a + b);
+            } catch (QueueFullException e) {
+                e.printStackTrace();
+            }
+            System.out.print(a + " ");
+        }
+    }
+}
+----------------------------------------------
+Output:
+0 1 1 2 3 5 8 13 
+
+**********************************************
+
+Q2. Queue Implementation
+-------------------------
+Suppose you are given an implementation of a queue of integers. The operations that can be performed on the queue are:
+
+i. isEmpty (Q) — returns true if the queue is empty, false otherwise.
+
+ii. delete (Q) — deletes the element at the front of the queue and returns its value.
+
+iii. insert (Q, i) — inserts the integer i at the rear of the queue.
+
+Consider the following function:
+
+void f (queue Q) { 
+   int i ; 
+   if (!isEmpty(Q)) { 
+   i = delete(Q); 
+   f(Q); 
+   insert(Q, i); 
+   } 
+} 
+-------------------------
+Options
+This problem has only one correct answer:-
+1. Leaves the queue Q unchanged
+2. Reverses the order of the elements in the queue Q 
+3. Deletes the element at the front of the queue Q and inserts it at the rear keeping the other elements in the same order
+4. Empties the queue Q.
+
+Solution Description(2)
+:As it is recursive call, and removing from front while inserting from end, that means last element will be deleted at last and will be inserted 1st in the new queue. And like that it will continue till first call executes insert(Q,i) function.
+So, the queue will be in reverse.
+
+*****************************************
+
+Q3.  Insert Element
+--------------------
+In optimized linked list implementation of a queue, where does a new element be inserted?
+
+Options
+This problem has only one correct answer:-
+1. At the head of linked list
+2. At the tail of the linked list 
+3. At the centre position in the linked list
+4. None
+
+Solution(2)
+
+*********************
+
+
+
