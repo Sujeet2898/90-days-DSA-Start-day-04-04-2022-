@@ -1,0 +1,29 @@
+Q1. Queue
+----------
+A queue is a ?
+
+Options
+This problem has only one correct answer:-
+1. FIFO (First In First Out) list 
+2. LIFO (Last In First Out) list
+3. Ordered array
+4. Linear tree
+
+Solution(1)
+
+*************************
+
+Q2.  Correct Order
+-------------------
+If the elements “p”, “q”, “r” and “s” are placed in a queue and are deleted one at a time, in what order will they be removed?
+
+Options
+This problem has only one correct answer:-
+1. srqp
+2. pqrs 
+3. srpq
+4. qrsp
+
+Solution(2)
+
+********************
