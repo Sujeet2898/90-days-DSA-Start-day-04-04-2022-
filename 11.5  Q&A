@@ -1,0 +1,58 @@
+Q1.  Time Complexity
+--------------------
+What is the time complexity of performing doublecapacity function in case of queues?
+
+Options
+This problem has only one correct answer:-
+1. O(n) 
+2. O(1)
+3. O(log(n))
+4. O(n^2)
+
+Solution(1)
+
+**************************
+
+Q2.  LL Queue
+--------------
+Which of the following is true about linked list implementation of queue?
+
+(A) In enqueue operation, if new nodes are inserted at the beginning of linked list, then in pop operation, nodes must be removed from end.
+
+(B) In dequeue operation, if new nodes are inserted at the end, then in pop operation, nodes must be removed from the beginning.
+
+--------------------
+Options
+This problem has only one correct answer:-
+1. a)
+2. b)
+3. Both a) and b) 
+4. none
+
+Solution Description(3)
+: To keep the First In First Out order, a queue can be implemented using linked list in any of the given two ways.
+
+**********************
+
+Q3.  Stack and Queue
+---------------------
+The seven elements A, B, C, D, E, F and G are pushed onto a stack in reverse order, i.e., starting from G. The stack is popped four times and each element is inserted into a queue.Three elements are deleted from the queue and pushed back onto the stack. Now, two element are popped from the stack. Which element is at the top of the Stack ?
+
+Options
+This problem has only one correct answer:-
+1. A 
+2. C
+3. D
+4. B
+
+Solution(1)
+
+**********************
+
+
+
+
+
+
+
+
