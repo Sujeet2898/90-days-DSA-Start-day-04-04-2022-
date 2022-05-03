@@ -47,7 +47,7 @@ public class QueueUsingLL<T> {
 
     void enqueue(T element){
         Node<T> newNode = new Node<>(element);
-        if (rear == null){
+        if (front == null){
             front = newNode;
             rear = newNode;
         }else{
