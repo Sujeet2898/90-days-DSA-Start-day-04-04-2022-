@@ -1,3 +1,6 @@
+ArrayList :  ArrayList is Dynamic version of Array. There is no need to give size in ArrayList.  ArrayList internally kept an Array in which we are storing elements and this Array continuously grow when we add more elements. Array grow to its double size. It is generic. So, we can create ArrayList of non-primitive type like Integer, Byte, Short, Long, Float, Double, String, Character, Boolean, Student, etc. We can't write primitive type i.e int, byte, short, long, float, double, boolean and char.
+ ---------------------------------------------------
+
 Create Project: LinkedList
 
 Create Package: default
