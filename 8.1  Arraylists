@@ -60,7 +60,7 @@ public class ArrayListDemo {
 
         System.out.println();
 
-        for (int element : list1){               // For Each Loop : Move in Elements
+        for (int element : list1){               // For Each Loop : Move in Elements  (Used for "Quick Traversal")
             System.out.print(element + " ");
         }
     }
