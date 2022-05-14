@@ -54,13 +54,13 @@ public class ArrayListDemo {
         list1.add(25);
         list1.add(2, 50);
 
-        for (int i = 0; i < list1.size(); i++){          // For Loop
+        for (int i = 0; i < list1.size(); i++){          // For Loop : Move in Indexes
             System.out.print(list1.get(i) + " ");
         }
 
         System.out.println();
 
-        for (int element : list1){               // For Each Loop
+        for (int element : list1){               // For Each Loop : Move in Elements
             System.out.print(element + " ");
         }
     }
