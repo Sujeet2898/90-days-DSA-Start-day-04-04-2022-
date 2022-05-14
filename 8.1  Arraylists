@@ -54,13 +54,13 @@ public class ArrayListDemo {
         list1.add(25);
         list1.add(2, 50);
 
-        for (int i = 0; i < list1.size(); i++){          // For Loop : Move in Indexes
+        for (int i = 0; i < list1.size(); i++){          // For Loop : Move in Indexes (Used for making changes in list)
             System.out.print(list1.get(i) + " ");
         }
 
         System.out.println();
 
-        for (int element : list1){               // For Each Loop : Move in Elements  (Used for "Quick Traversal")
+        for (int element : list1){               // For Each Loop : Move in Elements  (Used for "Quick Traversal or Iteration")
             System.out.print(element + " ");
         }
     }
