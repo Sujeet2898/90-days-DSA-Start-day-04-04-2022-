@@ -42,7 +42,7 @@ public class LinkedListUse {
                 }
                 temp.next = newNode;
             }
-            data = s.nextInt();
+            data = s.nextInt();   // taking next data
         }
         return head;
     }
@@ -114,7 +114,7 @@ public class LinkedListUse {
                 tail.next = newNode;
                 tail = newNode;   // Or tail = tail.next;
             }
-            data = s.nextInt();
+            data = s.nextInt();     // taking next data
         }
         return head;
     }
