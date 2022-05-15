@@ -27,11 +27,11 @@ public class TreeUse {
 
         System.out.println("Enter next node data");
         int nodeData = sc.nextInt();
-        TreeNode<Integer> root = new TreeNode<Integer>(nodeData);    // Firstly creating rootNode
+        TreeNode<Integer> root = new TreeNode<Integer>(nodeData);    // Firstly creating rootNode (base case)
 
         System.out.println("Enter number of children for " + nodeData);
         int childrenCount = sc.nextInt();
-        for (int i = 0; i < childrenCount; i++){
+        for (int i = 0; i < childrenCount; i++){     // Recursively creating descendants of root
             TreeNode<Integer> child = takeInput();   // creating node for each descendant of root
             root.children.add(child);           // for making parent-children link
 
