@@ -176,6 +176,22 @@ Enter number of children for 3
 6:
 3:
 
+--------------------
+
+Input:
+4 2 1 0 2 0
+
+Output:
+Enter number of children for 4
+Enter next node data
+Enter number of children for 1
+Enter next node data
+Enter number of children for 2
+4:1,2,
+1:
+2:
+
+
 
 ************************************
 
