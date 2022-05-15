@@ -163,9 +163,9 @@ public class TreeUse {
     public static void print(TreeNode<Integer> root){
         String str = root.data + ":";
         for (int i = 0; i < root.children.size(); i++) {   // traversing through children of root (Only Sibling)
-            str = str + root.children.get(i).data + ",";  // rootData: child1, child2, child3 and so on (Only Sibling)
+            str = str + root.children.get(i).data + ",";   // rootData: child1, child2, child3 and so on (Only Sibling)
         }                                                  //      |
-        System.out.println(str);                       // Printing above Sibling
+        System.out.println(str);                           // Printing above Sibling
 
         for (int i = 0; i < root.children.size(); i++){
             print(root.children.get(i));    // recursive approach for printing & traversing through each descendant of root
