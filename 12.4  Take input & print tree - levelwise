@@ -109,21 +109,47 @@ public class TreeUse {
 
     public static TreeNode<Integer> takeInputLevelWise(){
         Scanner sc = new Scanner(System.in);
+
+        //  Firstly taking rootData
         System.out.println("Enter root data");
         int rootData = sc.nextInt();
+
+        // Creating Queue in which we store pendingNodes whose children haven't asked yet.
         QueueUsingLL<TreeNode<Integer>> pendingNodes = new QueueUsingLL<>();
+
+        // Creating Node of the tree as root using rootData
         TreeNode<Integer> root = new TreeNode<Integer>(rootData);
+
+        // Adding root into Queue as children of node hasn't asked yet
         pendingNodes.enqueue(root);
+
+        // Work : As long as Queue is not empty
         while (!pendingNodes.isEmpty()){
+
+            //  Handle the queueEmptyException of Queue by Try and Catch option
             try {
+
+                // Work 1 : Removing frontNode from the Queue
                 TreeNode<Integer> frontNode = pendingNodes.dequeue();
+
+                // Work 2 : Asking number of children of frontNode.
                 System.out.println("Enter num of children of " + frontNode.data);
                 int numChildren = sc.nextInt();
+
+                // Work 3 : Applying loop for taking all inputs for the number of children of frontNode
                 for (int i = 0; i < numChildren; i++){
                     System.out.println("Enter " + (i + 1) + "th child of " + frontNode.data);
+
+                    // 3.1  Taking childInput
                     int child = sc.nextInt();
+
+                    // 3.2  Creating node for the childInput i.e childNode
                     TreeNode<Integer> childNode = new TreeNode<Integer>(child);
+
+                    // 3.3  Linking childNode with the frontNode
                     frontNode.children.add(childNode);
+
+                    // 3.4  Adding that childNode also into Queue as children of childNode hasn't asked yet
                     pendingNodes.enqueue(childNode);
                 }
             } catch (QueueEmptyException e) {
@@ -133,7 +159,7 @@ public class TreeUse {
         }
         return root;
     }
-
+    
     public static void print(TreeNode<Integer> root){
         String str = root.data + ":";
         for (int i = 0; i < root.children.size(); i++) {   // traversing through children of root (Only Sibling)
