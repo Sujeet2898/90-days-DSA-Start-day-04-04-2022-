@@ -158,14 +158,14 @@ public class TreeUse {
     }
     
     public static int largest(TreeNode<Integer> root){
-        if (root == null){
-            return Integer.MIN_VALUE;
+        if (root == null){                 // not a base case
+            return Integer.MIN_VALUE;      // returning infinitely small value
         }
         int ans = root.data;
-        for (int i = 0; i < root.children.size(); i++){
-            int childLargest = largest(root.children.get(i));
+        for (int i = 0; i < root.children.size(); i++){          // base case is internally included
+            int childLargest = largest(root.children.get(i));    // recursive call
             if (childLargest > ans){
-                ans = childLargest;
+                ans = childLargest;                              // updating Largest value
             }
         }
         return ans;
