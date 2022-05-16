@@ -117,7 +117,7 @@ public class TreeUse {
         Scanner sc = new Scanner(System.in);
 
         //  Firstly taking rootData
-        System.out.println("Enter root data");
+        // System.out.println("Enter root data");
         int rootData = sc.nextInt();
 
         // Creating Queue in which we store pendingNodes whose children haven't asked yet.
@@ -139,12 +139,12 @@ public class TreeUse {
                 TreeNode<Integer> frontNode = pendingNodes.dequeue();
 
                 // Work 2 : Asking number of children of frontNode.
-                System.out.println("Enter num of children of " + frontNode.data);
+                // System.out.println("Enter num of children of " + frontNode.data);
                 int numChildren = sc.nextInt();
 
                 // Work 3 : Applying loop for taking all inputs for the number of children of frontNode
                 for (int i = 0; i < numChildren; i++){
-                    System.out.println("Enter " + (i + 1) + "th child of " + frontNode.data);
+                    // System.out.println("Enter " + (i + 1) + "th child of " + frontNode.data);
 
                     // 3.1  Taking childInput
                     int child = sc.nextInt();
@@ -192,7 +192,7 @@ Input:
 
 --------------
 Output:
-5
+3
 
 
 **************************************
