@@ -159,12 +159,12 @@ public class TreeUse {
     }
     
     public static int numNodes(TreeNode<Integer> root){
-        if (root == null){
+        if (root == null){      // not a base case
             return 0;
         }
         int count = 1;
-        for (int i = 0; i < root.children.size(); i++){
-            count += numNodes(root.children.get(i));
+        for (int i = 0; i < root.children.size(); i++){  // base case is internally included
+            count += numNodes(root.children.get(i));     // recursive call
         }
         return count;
     }
