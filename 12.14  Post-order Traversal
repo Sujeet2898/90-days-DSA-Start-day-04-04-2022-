@@ -171,6 +171,11 @@ public class TreeUse {
         for (int i = 0; i < root.children.size(); i++){
             postOrder(root.children.get(i));
         }
+       // Or
+       // for (TreeNode<Integer> child: root.children){
+       //      postOrder(child);
+       // }
+        
         System.out.print(root.data + " ");
     }
     public static void main(String[] args) {
