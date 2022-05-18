@@ -166,7 +166,7 @@ public class TreeUse {
     }
     
     public static int getHeight(TreeNode<Integer> root){
-        int height = 0;
+        int height = 0;        // For fiding depth, -1 istaken instead of 0 and whole code is same.
         for (TreeNode<Integer> child: root.children){
             int childHeight = getHeight(child);
             height = Math.max(childHeight,height);
