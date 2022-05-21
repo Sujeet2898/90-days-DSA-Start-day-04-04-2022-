@@ -179,19 +179,23 @@ public class BinaryTreeUse {
         QueueUsingLL<BinaryTreeNode<Integer>> mainQueue = new QueueUsingLL<>();
         mainQueue.enqueue(root);
 
+        // Work : As long as Queue is not empty
         while (!mainQueue.isEmpty()){
+            
+            // Steps: 1. dequeue  2. print  3. enqueue
             try {
-                BinaryTreeNode<Integer> front = mainQueue.dequeue();
-            System.out.print(front.data + ":");
+                BinaryTreeNode<Integer> front = mainQueue.dequeue();    // 1. dequeue
+            System.out.print(front.data + ":");          // 2. print
+            
             if (front.left != null){
-                mainQueue.enqueue(front.left);
-                System.out.print("L:" + front.left.data);
+                mainQueue.enqueue(front.left);      // 3. enqueue
+                System.out.print("L:" + front.left.data);     // 4. print
             }else {
                 System.out.print("L:-1");
             }
             if (front.right != null){
-                mainQueue.enqueue(front.right);
-                System.out.print(",R:" + front.right.data);
+                mainQueue.enqueue(front.right);     // 3. enqueue
+                System.out.print(",R:" + front.right.data);    // 4. print
             }else {
                 System.out.print(",R:-1");
             }
