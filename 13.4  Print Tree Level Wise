@@ -174,28 +174,31 @@ public class BinaryTreeUse {
              }
              return root;
          }
-    
+
         public static void printLevelWise(BinaryTreeNode<Integer> root){
         QueueUsingLL<BinaryTreeNode<Integer>> mainQueue = new QueueUsingLL<>();
         mainQueue.enqueue(root);
 
         while (!mainQueue.isEmpty()){
-            int count = mainQueue.size();
-            for (int i = 0; i < count; i++){
-                try {
-                    root = mainQueue.dequeue();
-                } catch (QueueEmptyException e) {
-                    e.printStackTrace();
-                }
-                System.out.print(root.data + " ");
-                if (root.left != null){
-                    mainQueue.enqueue(root.left);
-                }
-                if (root.right != null){
-                    mainQueue.enqueue(root.right);
-                }
+            try {
+                BinaryTreeNode<Integer> front = mainQueue.dequeue();
+            System.out.print(front.data + ":");
+            if (front.left != null){
+                mainQueue.enqueue(front.left);
+                System.out.print("L:" + front.left.data);
+            }else {
+                System.out.print("L:-1");
             }
-            System.out.println();
+            if (front.right != null){
+                mainQueue.enqueue(front.right);
+                System.out.print(",R:" + front.right.data);
+            }else {
+                System.out.print(",R:-1");
+            }
+                System.out.println();
+            } catch (QueueEmptyException e) {
+                e.printStackTrace();
+            }
         }
     }
     
@@ -238,8 +241,13 @@ Enter right child of 7
 -1
 ------------------------
 Output:
-1 
-2 3 
-4 5 6 7 
+1:L:2,R:3
+2:L:4,R:5
+3:L:6,R:7
+4:L:-1,R:-1
+5:L:-1,R:-1
+6:L:-1,R:-1
+7:L:-1,R:-1
+
 
 ************************************
