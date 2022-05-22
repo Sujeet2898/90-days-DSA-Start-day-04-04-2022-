@@ -1,3 +1,9 @@
+Q.  Inorder Binary Tree
+---------------------------------------------
+You are given the root node of a binary tree. Print its inorder traversal.
+---------------------------------------------
+Inorder: Firstly left is printed, secondly root is printed and lastly right is printed i.e left to right.
+---------------------------------------------
 Create Project: BinaryTrees
 
 Create Package: default
