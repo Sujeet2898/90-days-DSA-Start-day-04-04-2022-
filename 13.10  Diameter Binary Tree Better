@@ -243,7 +243,7 @@ public class BinaryTreeUse {
         // So, overAll diameter is maximum of option1 with maximum of option2 & option3
         int diameter = Math.max(option1, Math.max(option2, option3));
         
-        // We have to return overAll height and overAll diameter
+        // We have to return overAll height and overAll diameter as output
         Pair<Integer, Integer> output = new Pair<>();
         output.first = height;
         output.second = diameter;
