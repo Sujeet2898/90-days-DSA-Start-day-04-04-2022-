@@ -2,7 +2,8 @@ Q.  Preorder Binary Tree
 ---------------------------------------------
 You are given the root node of a binary tree. Print its preorder traversal.
 ---------------------------------------------
-Preorder: Print root first, then children are printed.
+Preorder: Root -> Left SubTree -> Right SubTree
+          Print root first, then children are printed.
 ---------------------------------------------
 Create Project: BinaryTrees
 
