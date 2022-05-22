@@ -1,3 +1,10 @@
+Q.  Construct Tree from Preorder and Inorder
+--------------------------------------------
+For a given preorder and inorder traversal of a Binary Tree of type integer stored in an array/list, create the binary tree using the given two arrays/lists. You just need to construct the tree and return the root.
+--------------------------------------------
+Note:
+Assume that the Binary Tree contains only unique elements. 
+--------------------------------------------
 Create Project: BinaryTrees
 
 Create Package: default
@@ -203,11 +210,17 @@ public class BinaryTreeUse {
     }
     
     public static BinaryTreeNode<Integer> buildTreeHelper(int in[], int pre[], int inS, int inE, int preS, int preE){
+        
+        // Base Case : array is empty
         if (inS > inE){
             return null;
         }
+        
+        // rootData is at the starting of preOrder and work is to be done within range ( not 0 )
         int rootData = pre[preS];
         BinaryTreeNode<Integer> root = new BinaryTreeNode<>(rootData);
+        
+        // Finding index of root in InOrder
         int rootInIndex = -1;
         for (int i = inS; i <= inE; i++){
             if (in[i] == rootData){
@@ -218,17 +231,26 @@ public class BinaryTreeUse {
         if (rootInIndex == -1){
             return null;
         }
+        
+        // Necessary 8 Variables:-
+        // 4 For InOrder
         int leftInS = inS;
         int leftInE = rootInIndex - 1;
         int rightInS = rootInIndex + 1;
         int rightInE = inE;
 
+        // 4 For PreOrder
         int leftPreS = preS + 1;
-        int leftPreE = (leftInE - leftInS) + leftPreS;  
+        int leftPreE = (leftInE - leftInS) + leftPreS;    // leftPreE - leftPreS = leftInE - leftInS
         int rightPreS = leftPreE + 1;
         int rightPreE = preE;
+        
+        // Recursively call on left subTree and attached to left of root
         root.left = buildTreeHelper(in, pre, leftInS, leftInE, leftPreS, leftPreE);
+        
+        // Recursively call on right subTree and attached to right of root
         root.right = buildTreeHelper(in, pre, rightInS, rightInE, rightPreS, rightPreE);
+        
         return root;
     }
 
