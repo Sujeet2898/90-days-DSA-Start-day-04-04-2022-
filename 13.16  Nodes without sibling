@@ -1,7 +1,9 @@
 Q.  Nodes without sibling
------------------------------------
+---------------------------------------------
 For a given Binary Tree of type integer, print all the nodes without any siblings.
------------------------------------
+----------------------------------------------
+A sibling is a node that has same parent. In a Binary Tree, there can be at most one sibling.
+----------------------------------------------
 Create Project: BinaryTrees
 
 Create Package: default
@@ -209,10 +211,9 @@ public class BinaryTreeUse {
     public static void printNodesWithoutSibling(BinaryTreeNode<Integer> root) {
         QueueUsingLL<BinaryTreeNode<Integer>> pendingNodes = new QueueUsingLL<>();
         pendingNodes.enqueue(root);
+        
         while (!pendingNodes.isEmpty()) {
             BinaryTreeNode<Integer> frontNode = null;
-            int counter = pendingNodes.size();
-            for (int i = 0; i < counter; i++) {
                 try {
                     frontNode = pendingNodes.dequeue();
                 } catch (QueueEmptyException e) {
@@ -231,7 +232,6 @@ public class BinaryTreeUse {
                 }
             }
         }
-    }
 
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInputLevelWise();
