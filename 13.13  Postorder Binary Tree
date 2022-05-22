@@ -2,6 +2,8 @@
 ---------------------------------------------
 For a given Binary Tree of integers, print the post-order traversal.
 ---------------------------------------------
+Postorder: Firstly children are printed, then root is printed.
+--------------------------------------------
 Create Project: BinaryTrees
 
 Create Package: default
