@@ -185,7 +185,7 @@ public class BinaryTreeUse {
         // Work : As long as Queue is not empty
         while (!mainQueue.isEmpty()){
             
-            // Steps: 1. dequeue  2. print  3. enqueue
+            // Steps: 1. dequeue  2. print  3. enqueue  4. print
             try {
                 BinaryTreeNode<Integer> front = mainQueue.dequeue();    // 1. dequeue
             System.out.print(front.data + ":");          // 2. print
