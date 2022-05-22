@@ -210,11 +210,17 @@ public class BinaryTreeUse {
     }
     
     public static BinaryTreeNode<Integer> buildTreesHelper(int in[], int post[], int inS, int inE, int postS, int postE){
+        
+        // Base Case : array is empty
         if (inS > inE){
             return null;
         }
+        
+        // rootData is at the ending of postOrder and work is to be done within range ( not "post.length - 1" )
         int rootData = post[postE];
         BinaryTreeNode<Integer> root = new BinaryTreeNode<>(rootData);
+        
+        // Finding index of root in InOrder
         int rootInIndex = -1;
         for (int i = inS; i <= inE; i++){
             if (in[i] == rootData){
@@ -225,17 +231,26 @@ public class BinaryTreeUse {
         if (rootInIndex == -1){
             return null;
         }
+        
+        // Necessary 8 Variables:-
+        // 4 For InOrder
         int leftInS = inS;
         int leftInE = rootInIndex - 1;
         int rightInS = rootInIndex + 1;
         int rightInE = inE;
 
+        // 4 For PostOrder
         int leftPostS = postS;
-        int leftPostE = (leftInE - leftInS) + leftPostS;
+        int leftPostE = (leftInE - leftInS) + leftPostS;   // leftPostE - leftPostS = leftInE - leftInS
         int rightPostS = leftPostE + 1;
         int rightPostE = postE - 1;
+        
+        // Recursively call on left subTree and attached to left of root
         root.left = buildTreesHelper(in, post, leftInS, leftInE, leftPostS, leftPostE);
+        
+        // Recursively call on right subTree and attached to right of root
         root.right = buildTreesHelper(in, post, rightInS, rightInE, rightPostS, rightPostE);
+        
         return root;
     }
 
