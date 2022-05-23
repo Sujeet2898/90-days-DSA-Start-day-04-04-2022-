@@ -206,9 +206,45 @@ public class BinaryTreeUse {
         }
     }
     
+    Or
+    
+    public static void printLevelWis(BinaryTreeNode<Integer> root) {
+       
+        QueueUsingLL<BinaryTreeNode<Integer>> mainQueue = new QueueUsingLL<>();
+        mainQueue.enqueue(root);
+
+        // Work : As long as Queue is not empty
+        while (!mainQueue.isEmpty()){
+            // Steps: 1. dequeue  2. print  3. enqueue
+
+            int count = mainQueue.size();
+            for(int i = 0; i < count; i++){
+                try {
+                    BinaryTreeNode<Integer> front = mainQueue.dequeue();    // 1. dequeue
+                    System.out.print(front.data + " ");          // 2. print
+
+
+                    if (front.left != null){
+                        mainQueue.enqueue(front.left);      // 3. enqueue
+                    }
+
+                    if (front.right != null){
+                        mainQueue.enqueue(front.right);     // 3. enqueue
+                    }
+
+                } catch (QueueEmptyException e) {
+                    e.printStackTrace();
+                }
+            }
+            System.out.println();
+        }
+    }
+    
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInputLevelWise();
         printLevelWise(root);
+        System.out.println();
+        printLevelWis(root);
     }
 }
 ---------------------------------------------
@@ -252,6 +288,10 @@ Output:
 5:L:-1,R:-1
 6:L:-1,R:-1
 7:L:-1,R:-1
+
+1
+2 3
+4 5 6 7
 
 
 ************************************
