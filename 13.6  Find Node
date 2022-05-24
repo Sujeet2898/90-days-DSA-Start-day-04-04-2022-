@@ -206,24 +206,22 @@ public class BinaryTreeUse {
         }
     }
     
-        public static boolean isNodePresent(BinaryTreeNode<Integer> root, int x) {
-        boolean val=false;
-
-        if(root.data==x){
+        public static boolean isNodePresent(BinaryTreeNode<Integer> root, int x){
+        if (root == null){
+            return false;
+        }
+        if (root.data == x){
             return true;
         }
-        //checking left side of tree is null or not
-        if(root.left!=null){
-            val=isNodePresent(root.left,x);
+        boolean findInLeftChild = isNodePresent(root.left, x);
+        if (findInLeftChild){
+            return true;
         }
-        //we need to only check if and only if we didn't found
-        //in left side of tree otherwise value will be overridden
-        if(val==false){
-            if(root.right!=null){
-                val=isNodePresent(root.right,x);
-            }
+        boolean findInRightChild = isNodePresent(root.right, x);
+        if (findInRightChild){
+            return true;
         }
-        return val;
+        return false;
     }
     
     public static void main(String[] args) {
