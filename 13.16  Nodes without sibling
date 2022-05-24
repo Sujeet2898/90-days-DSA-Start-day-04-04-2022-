@@ -209,29 +209,17 @@ public class BinaryTreeUse {
     }
     
     public static void printNodesWithoutSibling(BinaryTreeNode<Integer> root) {
-        QueueUsingLL<BinaryTreeNode<Integer>> pendingNodes = new QueueUsingLL<>();
-        pendingNodes.enqueue(root);
-        
-        while (!pendingNodes.isEmpty()) {
-            BinaryTreeNode<Integer> frontNode = null;
-                try {
-                    frontNode = pendingNodes.dequeue();
-                } catch (QueueEmptyException e) {
-                    e.printStackTrace();
-                }
-                if (frontNode.left == null && frontNode.right != null) {
-                    System.out.print(frontNode.right.data + " ");
-                } else if (frontNode.left != null && frontNode.right == null) {
-                    System.out.print(frontNode.left.data + " ");
-                }
-                if (frontNode.left != null) {
-                    pendingNodes.enqueue(frontNode.left);
-                }
-                if (frontNode.right != null) {
-                    pendingNodes.enqueue(frontNode.right);
-                }
-            }
-        }
+       if (root == null){
+           return;
+       }
+       if (root.left == null && root.right != null) {
+           System.out.print(root.right.data + " ");
+       } else if (root.left != null && root.right == null) {
+           System.out.print(root.left.data + " ");
+       }
+       printNodesWithoutSibling(root.left);
+       printNodesWithoutSibling(root.right);
+    }
 
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInputLevelWise();
