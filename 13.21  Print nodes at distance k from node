@@ -1,3 +1,8 @@
+Q.  Print nodes at distance k from node
+----------------------------------------------
+You are given a Binary Tree of type integer, a target node, and an integer value K.
+Print the data of all nodes that have a distance K from the target node. The order in which they would be printed will not matter.
+----------------------------------------------
 Create Project: BinaryTrees
 
 Create Package: default
@@ -205,44 +210,65 @@ public class BinaryTreeUse {
    public static void nodesAtDistanceK(BinaryTreeNode<Integer> root, int node, int k) {
         nodeToRootPath(root, node, k);
     }
-
+    
+    // CASE-1 :
     private static void printNodesAtDistanceK(BinaryTreeNode<Integer> root, int k) {
+    
+        // For no possible solution
         if (root == null || k < 0) {
             return;
         }
+        
+        // We have reached at our final nodes
         if (k == 0) {
             System.out.println(root.data);
             return;
         }
+        
+        // For k > 0, call on left & right subTrees and is decrease at each steps by 1
         printNodesAtDistanceK(root.left,k-1);
         printNodesAtDistanceK(root.right,k-1);
     }
     
+    // CASE-2 :
     private static int nodeToRootPath(BinaryTreeNode<Integer> root, int node, int k) {
+    
+        // distance -1 denotes, we don't find any target node
         if (root==null) {
             return -1;
         }
+        
+        // if root is equal to target node, then print subTrees of target node and return 0 distance
         int rootData = root.data;
         if (root.data == node) {
             printNodesAtDistanceK(root, k);
             return 0;
         }
         
+        // if root is not equal to target node 
+        // Check target node in left subTree of root by calculating distance of left SubTree
         int leftSubTreeDist = nodeToRootPath(root.left, node, k);
         if (leftSubTreeDist != -1){
+        
+            // current node (not root) is at kth distance from target node
             if(leftSubTreeDist + 1 == k){
                 System.out.println(rootData);
             }else{
+            
+                // target node is found at left of root, call on ancestor right subTree
                 printNodesAtDistanceK(root.right,k-(leftSubTreeDist+1)-1);
             }
             return leftSubTreeDist + 1;
         }
-
+        
+        // Check target node in right subTree of root by calculating distance of right SubTree
         int rightSubTreeDist = nodeToRootPath(root.right, node, k);
         if (rightSubTreeDist != -1) {
             if(rightSubTreeDist + 1 == k) {
                 System.out.println(rootData);
             }else{
+            
+                // target node is found at right of root, call on ancestor left subTree
                 printNodesAtDistanceK(root.left,k-(rightSubTreeDist+1)-1);
             }
             return rightSubTreeDist+1;
