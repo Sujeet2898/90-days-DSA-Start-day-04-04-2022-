@@ -1,0 +1,59 @@
+Q1. is BST?
+----------------------------
+Is this a BST ?
+
+ 10
+   \
+    20
+      \
+       30
+         \
+          40
+            \
+             50
+             
+----------------------------
+Options
+This problem has only one correct answer:-
+1. Yes 
+2. No
+Answer(1)
+
+***************************************
+
+Q2. BST Time Complexity
+----------------------------------
+The run time for traversing all the nodes of a binary search tree with n nodes and printing them in an order is
+a)  O(nlg(n))
+b)  O(n)
+c)  O(√n)
+d)  O(log(n))
+---------------------------
+Options
+This problem has only one correct answer:-
+1. a
+2. b 
+3. c
+4. d
+Answer(2)
+
+****************************************
+
+Q2.  Traversal in BST
+----------------------------
+Which type of traversal of binary search tree outputs the value in sorted order ?
+a)  Pre-order
+b)  In-order
+c)  Post-order
+d)  None
+-----------------------
+Options
+This problem has only one correct answer
+1. a
+2. b 
+3. c
+4. d
+Answer(2)
+
+***************************
+
