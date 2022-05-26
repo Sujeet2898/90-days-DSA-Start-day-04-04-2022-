@@ -3,7 +3,7 @@ Q. Check if a Binary Tree is BST
 Given a binary tree with N number of nodes, check if that input tree is BST (Binary Search Tree). If yes, return true, return false otherwise.
 Note: Duplicate elements should be kept in the right subtree.
 --------------------------------------------
-Time Comlexity: O(nlogn) or O(n^2) in below given solution.
+Time Complexity: O(nlogn) or O(n^2) in below given solution.
 --------------------------------------------
 Create Project: BinaryTrees
 
