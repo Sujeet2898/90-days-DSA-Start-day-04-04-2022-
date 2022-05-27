@@ -211,31 +211,37 @@ public class BinaryTreeUse {
     }
     
     public static Pair<Boolean, Pair<Integer, Integer>> isBST2(BinaryTreeNode<Integer> root){
+        
+        // Basecase
         if (root == null){
             Pair<Boolean, Pair<Integer, Integer>> output = new Pair<Boolean, Pair<Integer, Integer>>();
-            output.first = true;
-            output.second = new Pair<Integer, Integer>();
-            output.second.first = Integer.MAX_VALUE;
-            output.second.second = Integer.MIN_VALUE;
+            output.first = true;                             // first is Boolean
+            output.second = new Pair<Integer, Integer>();    // second is Pair
+            output.second.first = Integer.MAX_VALUE;         // second.first is minimum
+            output.second.second = Integer.MIN_VALUE;        // // second.first is maximum
             return output;
         }
 
+        // Call left & right
         Pair<Boolean, Pair<Integer, Integer>> leftOutput = isBST2(root.left);
         Pair<Boolean, Pair<Integer, Integer>> rightOutput = isBST2(root.right);
 
+        // Overall minimum and maximum
         int min = Math.min(root.data, Math.min(leftOutput.second.first, rightOutput.second.first));
         int max = Math.max(root.data, Math.max(leftOutput.second.second, rightOutput.second.second));
 
+        // 4 condition for isBST
         boolean isBST = (root.data > leftOutput.second.second)
                 && (root.data <= rightOutput.second.first)
                 && leftOutput.first
                 && rightOutput.first;
 
+        // Return
         Pair<Boolean, Pair<Integer, Integer>> output = new Pair<Boolean, Pair<Integer, Integer>>();
-        output.first = isBST;
+        output.first = isBST;         // returning overall boolean
         output.second = new Pair<Integer, Integer>();
-        output.second.first = min;
-        output.second.second = max;
+        output.second.first = min;    // returning overall minimum
+        output.second.second = max;   // returning overall maximum
         return output;
     }
 
