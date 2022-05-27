@@ -214,12 +214,18 @@ public class BinaryTreeUse {
         return isBST3(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
     public static boolean isBST3(BinaryTreeNode<Integer> root, int min, int max){
+    
+        // Basecase
         if (root == null){
             return true;
         }
-        if (root.data < min || root.data > max ){
+        
+        // Checking range
+        if (root.data < min || root.data > max ){   
             return false;
         }
+        
+        // Call on left & right and then return
         boolean isLeftOk = isBST3(root.left, min, root.data - 1);
         boolean isRightOk = isBST3(root.right, root.data, max);
         return isLeftOk && isRightOk;
