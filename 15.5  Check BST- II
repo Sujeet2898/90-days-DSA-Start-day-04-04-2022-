@@ -35,7 +35,13 @@ public class Node<T> {
     }
 }
 ----------------------------------------------
-
+Create other class: Pair
+----------------------------------------------
+public class Pair<T,V>{
+    public T first;     // first means Boolean
+    public V second;    // second means Pair
+}
+----------------------------------------------
 Create class: QueueUsingLL
 ----------------------------------------------
 public class QueueUsingLL<T> {
