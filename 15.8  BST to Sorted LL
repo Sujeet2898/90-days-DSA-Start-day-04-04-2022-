@@ -32,8 +32,8 @@ public class Node<T> {
 Create other class: Pair
 ----------------------------------------------
 public class Pair<T,V>{
-    public T first;     // first means Boolean
-    public V second;    // second means Pair
+    public T first;     // first means head
+    public V second;    // second means tail
 }
 ----------------------------------------------
 Create class: QueueUsingLL
@@ -216,29 +216,36 @@ public class BinaryTreeUse {
 
     public static Pair<LinkedListNode<Integer>,LinkedListNode<Integer>> BSTToSortedLL(BinaryTreeNode<Integer> root){
 
+        // Basecase
         if( root==null ) {
             Pair<LinkedListNode<Integer>,LinkedListNode<Integer>> output = new Pair<LinkedListNode<Integer>, LinkedListNode<Integer>>();
-            output.first = null;
-            output.second = null;
+            output.first = null;      // first i.e head is null
+            output.second = null;     // second i.e tail is null
             return output;
         }
+        
+        // Call left & right
         Pair<LinkedListNode<Integer>,LinkedListNode<Integer>> leftOutput = BSTToSortedLL(root.left);
         Pair<LinkedListNode<Integer>,LinkedListNode<Integer>> rightOutput = BSTToSortedLL(root.right);
+        
+        // Constructing fresh node for LinkedList
         LinkedListNode<Integer> newNode = new LinkedListNode<Integer>(root.data);
 
-        if(leftOutput.second!=null)
+        // Applying condition
+        if(leftOutput.second != null)
             leftOutput.second.next = newNode;
         else
             leftOutput.first = newNode;
 
-        if(rightOutput.first!=null)
+        if(rightOutput.first != null)
             newNode.next = rightOutput.first;
         else
             rightOutput.second = newNode;
 
+        // Return
         Pair<LinkedListNode<Integer>,LinkedListNode<Integer>> output = new Pair<LinkedListNode<Integer>, LinkedListNode<Integer>>();
-        output.first = leftOutput.first;
-        output.second = rightOutput.second;
+        output.first = leftOutput.first;         // returning overall head 
+        output.second = rightOutput.second;      // returning overall tail
         return output;
     }
 
@@ -256,22 +263,26 @@ public class BinaryTreeUse {
 ---------------------------------------------
 Input:
 Enter root data
-3
-Enter left child of 3
-1
-Enter right child of 3
-5
-Enter left child of 1
+11
+Enter left child of 11
 -1
-Enter right child of 1
-2
-Enter left child of 5
+Enter right child of 11
+12
+Enter left child of 12
 -1
-Enter right child of 5
+Enter right child of 12
+13
+Enter left child of 13
 -1
-Enter left child of 2
+Enter right child of 13
+14
+Enter left child of 14
 -1
-Enter right child of 2
+Enter right child of 14
+15
+Enter left child of 15
+-1
+Enter right child of 15
 -1
 ------------------------
 Output:
