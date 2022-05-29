@@ -243,11 +243,11 @@ public class BinaryTreeUse {
             BinaryTreeNode<Integer> newNode = new BinaryTreeNode<>(data);
             return newNode;
         }
-        if (data < root.data){
+        if (data <= root.data){
             // Call insert function on leftSide and attach the null on rootLeft
             root.left = insertDataHelper(data, root.left);
         }else {
-            // (data >= root.data)
+            // (data > root.data)
             // Call insert function on rightSide and attach the null on rootRight
             root.right = insertDataHelper(data, root.right);
         }
@@ -268,7 +268,7 @@ public class BinaryTreeUse {
             // call right
             return hasDataHelper(data, root.right);
         }else {
-            // call left i.e data >= root.data
+            // call left i.e data <= root.data
             return hasDataHelper(data, root.left);
         }
     }
