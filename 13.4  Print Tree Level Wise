@@ -174,7 +174,39 @@ public class BinaryTreeUse {
              }
              return root;
          }
+         
+        // 1. First Way of printing BinaryTree WITHOUT QueueUsingLL (WITHOUT levelWise) ---Very Important---
+               Output format:   1:L:2,R:3
+                                2:L:4,R:5
+                                4:
+                                5:
+                                3:R:6
+                                6:
+        
+        public static void printTree(BinaryTreeNode<Integer> root){
+        if (root == null){
+            return;
+        }
+        String toBePrinted = root.data + ":";
+        if (root.left != null){
+            toBePrinted += "L:" + root.left.data + ",";
+        }
+        if (root.right != null){
+            toBePrinted += "R:" + root.right.data;
+        }
+        System.out.println(toBePrinted);
+        printTree(root.left);
+        printTree(root.right);
+    }
 
+        
+        // 2. Second Way of printing BinaryTree WITH QueueUsingLL (WITH levelWise) ---Very Important---
+               Output format:   1:L:2,R:3
+                                2:L:4,R:5
+                                3:R:6
+                                4:
+                                5:
+                                6:
         public static void printLevelWise(BinaryTreeNode<Integer> root){
         QueueUsingLL<BinaryTreeNode<Integer>> mainQueue = new QueueUsingLL<>();
         mainQueue.enqueue(root);
@@ -206,9 +238,11 @@ public class BinaryTreeUse {
         }
     }
     
-    Or
-    
-    public static void printLevelWis(BinaryTreeNode<Integer> root) {
+    // 3. Third Way of printing BinaryTree WITH QueueUsingLL (WITH levelWise) in the following format ---Very Important---
+               Output format:   1
+                                2 3
+                                4 5 6
+     public static void printLevelWis(BinaryTreeNode<Integer> root) {
        
         QueueUsingLL<BinaryTreeNode<Integer>> mainQueue = new QueueUsingLL<>();
         mainQueue.enqueue(root);
