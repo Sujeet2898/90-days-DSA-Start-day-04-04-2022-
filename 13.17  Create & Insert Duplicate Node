@@ -2,6 +2,25 @@ Q.  Create & Insert Duplicate Node
 ----------------------------------------------
 For a given a Binary Tree of type integer, duplicate every node of the tree and attach it to the left of itself.
 The root will remain the same. So you just need to insert nodes in the given Binary Tree.
+                    10
+                   /  \
+                 20    30
+                /  \     \
+              40    50    60
+                            
+                                ⬇⬇
+                            
+                                10
+                               /  \
+                             10    30
+                            /     /  \
+                          20    30    60
+                         /  \        /
+                       20    50    60
+                      /     /
+                    40    50
+                   /
+                 40
 ----------------------------------------------
 Create Project: BinaryTrees
 
