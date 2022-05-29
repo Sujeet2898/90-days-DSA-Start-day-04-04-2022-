@@ -216,6 +216,10 @@ public class BinaryTreeUse {
         }
     }
     
+    public static boolean isBST(BinaryTreeNode<Integer> root){
+        return isBST2(root).first;
+    }
+    
     public static Pair<Boolean, Pair<Integer, Integer>> isBST2(BinaryTreeNode<Integer> root){
         
         // Basecase
@@ -255,7 +259,7 @@ public class BinaryTreeUse {
         BinaryTreeNode<Integer> root = takeInputLevelWise();
         printLevelWise(root);
         System.out.println();
-        System.out.println(isBST2(root).first);
+        System.out.println(isBST(root));
     }
 }
 ---------------------------------------------
