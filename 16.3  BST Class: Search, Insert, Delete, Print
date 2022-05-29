@@ -202,9 +202,11 @@ public class BinaryTreeUse {
         }
 
         if (data < root.data){
+            // Call delete function on leftSide and attach the null on rootLeft
             root.left = deleteDataHelper(data, root.left);
             return root;
         }else if (data > root.data){
+            // Call delete function on rightSide and attach the null on rootRight
             root.right = deleteDataHelper(data, root.right);
             return root;
         }else {
