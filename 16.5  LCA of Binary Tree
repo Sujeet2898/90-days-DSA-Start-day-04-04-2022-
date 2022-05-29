@@ -207,23 +207,37 @@ public class BinaryTreeUse {
     }
     
     public static int lcaBinaryTree(BinaryTreeNode <Integer> root , int a, int b){
+    
+        // Case 1: Root is null
         if(root==null) {
             return -1;
         }
+        
+        // Case 2: Both nodes a & b is equal to Root
         if(root.data==a || root.data==b) {
             return root.data;
         }
+        
+        // Call left & right subtree
         int leftLca = lcaBinaryTree(root.left, a, b);
         int rightLca = lcaBinaryTree(root.right, a, b);
+        
+        // Case 3: Both nodes a & b is null
         if(leftLca==-1 && rightLca ==-1) {
             return -1;
         }
+        
+        // Case 4: Node a is null & b is not null
         else if(leftLca==-1) {
             return rightLca;
         }
+        
+        // Case 5: Node a is not null & b is null
         else if(rightLca==-1) {
             return leftLca;
         }
+        
+        // Case 6: Both nodes a & b is not null
         else {
             return root.data;
         }
