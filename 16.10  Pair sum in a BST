@@ -226,7 +226,7 @@ public class BinaryTreeUse {
             temp = temp.right;
         }
 
-        // Assume BST contains all unique elements
+        // BST conditions
         while( !stack1.isEmpty() && !stack2.isEmpty() && (stack1.peek().data < stack2.peek().data) ) {
 
             BinaryTreeNode<Integer> frontNode1 = stack1.peek(),frontNode2 = stack2.peek();
