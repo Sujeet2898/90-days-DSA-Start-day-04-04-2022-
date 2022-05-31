@@ -17,9 +17,9 @@ public class MapUse {
         HashMap<Integer, Integer> map = new HashMap<>();
         for(int i : arr) {
             if(map.containsKey(i)) {
-                map.put(i, map.get(i) + 1 );
+                map.put(i, map.get(i) + 1 );    // put & (get + 1)
             }else {
-                map.put(i, 1);
+                map.put(i, 1);                  // put & 1
             }
         }
         int maxFreq = 0;
