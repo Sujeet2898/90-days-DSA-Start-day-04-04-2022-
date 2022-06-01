@@ -14,16 +14,21 @@ import java.util.HashMap;
 public class MapUse {
 
     public static int maximumFrequency(int[] arr) {
+    
+        // Creating HasMap whose first is "integer" stored in array & second is "freuency" of interger stored in array
         HashMap<Integer, Integer> map = new HashMap<>();
+        
         for(int i : arr) {
             if(map.containsKey(i)) {
-                map.put(i, map.get(i) + 1 );    // put & (get + 1)
+                map.put(i, map.get(i) + 1 );    // updating frequency
             }else {
-                map.put(i, 1);                  // put & 1
+                map.put(i, 1);                  // 1 if it is single
             }
         }
+        
         int maxFreq = 0;
         int max = Integer.MIN_VALUE;
+        
         for(int i : arr) {
             if( maxFreq < map.get(i) ) {
                 maxFreq = map.get(i);
