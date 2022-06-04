@@ -1,0 +1,154 @@
+Q1.  Time complexity
+------------------------------------------
+What is the time complexity of insertion , deletion and searching in case of Hashmaps using BSTs?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(n)
+2. O(n^2)
+3. O(logn) 
+4. O(nlogn)
+Answer(3)
+
+******************************************
+
+Q2.  Return type
+------------------------------------------
+What is the return type of containsKey() function in Hashmap?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. int
+2. String
+3. Boolean 
+4. Same as that of key
+Answer(3)
+
+******************************************
+
+Q3.  Hashmap function
+------------------------------------------
+Which function is used to insert a new key and value into the hashmap?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. get function
+2. put function 
+3. insert function
+4. push function
+Answer(2)
+
+*****************************************
+
+Q4.  Hash code
+-----------------------------------------
+Which of the following keys would have same hash code , If we calculate the hash code by subtracting the largest ASCII in our String with the smallest one?
+1) abcde
+2) bcdf
+3) pqr
+4) abei
+-----------------------------------------
+Options
+This problem has only one correct answer:-
+1. 1 and 2 
+2. 1 and 4
+3. 2 and 3
+4. 1 , 2 and 4
+Answer(1)
+
+******************************************
+
+Q5.  Hash function
+------------------------------------------
+What would the hash function return for the String "amit", if the hash code returns the sum of ASCII's and compression function gives the remainder when divided by 26?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 11 
+2. 15
+3. 5
+4. 19
+
+Solution Description(1)
+The sum of ASCII of amit is 427. And 427% 26 is 11.
+
+******************************************
+
+Q6.  Hashing
+------------------------------------------
+When we make each cell of our bucket array point to a linked list , it is known as _____ ?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. open hashing
+2. compression
+3. separate chaining 
+Answer(3)
+
+******************************************
+ 
+Q7.  Hashing
+------------------------------------------
+In which of the following collision handling methods we have a risk of filling up the bucket array and running out of space to store more keys and values ?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Separate chaining
+2. open hashing 
+Answer(2)
+
+*******************************************
+
+Q8.  Load factor
+-------------------------------------------
+What is the default value of load factor in Hashmaps?
+-------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 0.7
+2. 0.75 
+3. 0.8
+Answer(2)
+
+*******************************************
+
+Q9.  Time complexity
+------------------------------------------
+What is the time complexity of inserting a key and value into a hashmap?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(1) 
+2. O(n)
+3. O(logn)
+Answer(1)
+
+******************************************
+
+Q10.  Rehashing
+------------------------------------------
+If we perform rehashing when load factor is greater than 0.7, and the bucket size is 12 . For what value of size would we perform rehashing?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 7
+2. 8
+3. 9 
+4. 10
+Answer(3)
+
+******************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
