@@ -1,0 +1,60 @@
+Q1.  Passengers List
+------------------------------------------------------------
+Given is a waiting list of IRCTC , based on the booking date (early booking means more priority ). Arrange the following passenger in order of their ticket confirmation. ( The passenger who gets the ticket first, comes first).
+
+Name      Booking Date
+A               5/12/19
+B               8/12/19
+C               2/12/19
+D               7/12/19
+------------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. C A B D
+2. B D A C
+3. C A D B 
+4. A B C D
+Answer(3)
+
+************************************************************
+
+Q2.  Implementation of PQ
+------------------------------------------------------------
+With which data structure can a priority queue be implemented?
+------------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. Arrays
+2. Linked list
+3. Trees
+4. Hashmap
+5. All of the above 
+Answer(5)
+
+*************************************************************
+
+Q3.  Time Complexity
+------------------------------------------------------------
+Match the following time complexities to implement insertion into a Priority Queue using the following methods.
+1. Arrays (sorted)               A. O(logn)
+2. Linked List(unsorted)         B. O(n)
+3. Balanced BST                  C. O(1)
+------------------------------------------------------------
+Options
+This problem has only one correct answer:-
+1. 1->B 2->A 3->C
+2. 2->A 1->B 3->C
+3. 1->C 2->B 3->A
+4. 1->B 2->C 3->A 
+Answer(4)
+
+************************************************************
+
+Q4.  
+
+
+
+
+
+
+
