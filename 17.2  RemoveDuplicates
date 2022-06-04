@@ -48,7 +48,7 @@ public class RemoveDuplicates {
         // Iterate in array
         for (int i : arr) {
         
-            // if map doesn't contain single integer
+            // if map doesn't contain single unique integer
             if (!map.containsKey(i)) {
             
                 // means map contain duplicates
