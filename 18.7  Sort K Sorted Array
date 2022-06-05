@@ -4,6 +4,8 @@ Create Package: default
 
 Create class: PriorityQueueUse
 -----------------------------------------------
+Time Complexity: O(nlogk)
+-----------------------------------------------
 import java.util.PriorityQueue;
 
 public class PriorityQueueUse {
