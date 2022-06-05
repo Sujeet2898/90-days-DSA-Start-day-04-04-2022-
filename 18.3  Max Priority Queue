@@ -2,6 +2,9 @@ Q.  Code : Max Priority Queue
 ---------------------------------------------
 Implement the class for Max Priority Queue which includes following functions -
 ---------------------------------------------
+Time Complexity: O(logn) for insert & removeMax
+                 O(1) for all other function
+----------------------------------------------		 
 1. getSize -
 Return the size of priority queue i.e. number of elements present in the priority queue.
 
