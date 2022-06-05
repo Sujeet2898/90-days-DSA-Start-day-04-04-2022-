@@ -1,0 +1,41 @@
+Q1.  Time Complexity
+------------------------------------------
+What is the time complexity of heap sort ?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(n)
+2. O(logn)
+3. O(nlogn) 
+4. O(n^2)
+Answer(3)
+
+******************************************
+
+Q2. Space Complexity
+------------------------------------------
+What is the space complexity of in-place heap sort? 
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(n)
+2. O(1) 
+3. O(logn)
+4. O(nlogn)
+Answer(2)
+
+******************************************
+
+Q3.  Time Complexity
+------------------------------------------
+What is the time complexity of heapify and building a heap?
+------------------------------------------
+Options
+This problem has only one correct answer:-
+1. O(n) and O(n)
+2. O(n) and O(logn)
+3. O(logn) and O(logn)
+4. O(logn) and O(n) 
+Answer(4)
+
+******************************************
