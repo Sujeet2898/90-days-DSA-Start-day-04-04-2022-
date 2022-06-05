@@ -82,6 +82,8 @@ public class Priority_Queue {
 
         // Placing the lastElement at root
         heap.set(0, heap.get(heap.size() - 1));
+        
+        // Removing the lastElement as it has become same as root
         heap.remove(heap.size() - 1);
 
         int index = 0;
