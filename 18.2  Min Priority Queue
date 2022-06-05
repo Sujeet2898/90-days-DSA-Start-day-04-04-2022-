@@ -3,7 +3,10 @@ Create Project: Priority_Queue
 Create Package: default
 
 Create class: Priority_Queue
----------------------------
+-----------------------------------------------
+Time Complexity: O(logn) for insert & removeMin
+                 O(1) for all other function
+-----------------------------------------------	
 import java.util.ArrayList;
 
 public class Priority_Queue {
