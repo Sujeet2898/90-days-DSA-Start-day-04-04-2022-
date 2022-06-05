@@ -89,7 +89,7 @@ public class Priority_Queue {
         int index = 0;
         int minIndex = index;
         int leftChildIndex = 1;
-        int rightIndex = 2;
+        int rightChildIndex = 2;
 
         // Maintaining Min Priority Queue -> Heap Order Priority
         // Work is done till childElement becomes leafNode i.e leftChildElement should be valid & within the range of heap
@@ -101,8 +101,8 @@ public class Priority_Queue {
             }
 
             // Checking existing of rightChildElement
-            if (rightIndex < heap.size() && heap.get(rightIndex) < heap.get(minIndex)){
-                minIndex = rightIndex;
+            if (rightChildIndex < heap.size() && heap.get(rightChildIndex) < heap.get(minIndex)){
+                minIndex = rightChildIndex;
             }
 
             if (minIndex == index){
@@ -121,7 +121,7 @@ public class Priority_Queue {
                 index = minIndex;
                 // And calculating ChildIndex again
                 leftChildIndex = 2 * index + 1;
-                rightIndex = 2 * index + 2;
+                rightChildIndex = 2 * index + 2;
             }
         }
 
