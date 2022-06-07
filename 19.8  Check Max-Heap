@@ -30,7 +30,7 @@ public class PriorityQueueUse {
     }
 
     public static void main(String[] args) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>();
         int arr[] = {10, 9, 8, 7, 6, 5, 4, 3, 2, 7};
             System.out.println(checkMaxHeap(arr));
     }
