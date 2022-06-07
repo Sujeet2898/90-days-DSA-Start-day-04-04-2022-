@@ -14,12 +14,12 @@ Time Complexity: O(nlogk)
 -----------------------------------------------
 import java.util.PriorityQueue;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Collections;   // Max Priority Queue
 
 public class PriorityQueueUse {
 
     public static ArrayList<Integer> kSmallest(int n, int[] input, int k){
-        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());
+        PriorityQueue<Integer> pq = new PriorityQueue<>(Collections.reverseOrder());       // Max Priority Queue
 
         for (int i = 0; i < input.length; i++){
 
@@ -29,8 +29,8 @@ public class PriorityQueueUse {
 
             }else {
 
-                // If minElement of funnel (PriorityQueue) is greater than the next element of K
-                // then, remove the minElement & add next element of K into funnel (PriorityQueue)
+                // If maxElement of funnel (PriorityQueue) is greater than the next element of K
+                // then, remove the maxElement & add next element of K into funnel (PriorityQueue)
                 if (input[i] < pq.peek()){
                     pq.remove();
                     pq.add(input[i]);
