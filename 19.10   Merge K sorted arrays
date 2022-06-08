@@ -25,6 +25,23 @@ import java.util.Scanner;
 
 public class PriorityQueueUse {
 
+    public static class Pair implements Comparable<Pair> {
+    int listIndex;
+    int dataIndex;
+    int value;
+
+    Pair(int listIndex, int dataIndex, int value){
+        this.listIndex = listIndex;
+        this.dataIndex = dataIndex;
+        this.value = value;
+    }
+
+    public int compareTo(Pair other){
+        return this.value - other.value;
+    }
+ }
+    
+
     public static ArrayList<Integer> mergeKSortedArrays(ArrayList<ArrayList<Integer>> input){
         ArrayList<Integer> output = new ArrayList<>();
         PriorityQueue<Pair> pq = new PriorityQueue<>();
