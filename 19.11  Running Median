@@ -29,13 +29,19 @@ public class PriorityQueueUse {
         for(int val : arr) {
 
             // add()
-
-            if (min.size() > 0 && val > max.peek()) {
+            
+            // For adding in Min PriorityQueue, it should not be empty 
+            // And value which is going to be added must be larger than peek value
+            if (min.size() > 0 && val > min.peek()) {
                 min.add(val);
+                
             } else {
+            
+                // Generally adding is done on Max PriorityQueue
                 max.add(val);
             }
-
+            
+            // Balancing is necessary if difference of size is greater than 1
             if (max.size() - min.size() == 2) {
                 min.add(max.remove());
             } else if (min.size() - max.size() == 2) {
