@@ -16,7 +16,8 @@ Create Package: default
 
 Create class: PriorityQueueUse
 -----------------------------------------------
-Time Complexity: O(N * logK)
+Time Complexity: O(K * N * log(K * N))
+                where K is no. of arrays to merge & N is average length of arrays
 -----------------------------------------------
 import java.util.PriorityQueue;
 import java.util.ArrayList;
