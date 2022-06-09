@@ -7,7 +7,9 @@ Create class: TrieNode
 Time complexity:  add -> O(word length)
                   remove -> O(word length)
                   search -> O(word length)
------------------------------------------------                  
+----------------------------------------------- 
+Time complexity of both HashMap & Trie is same. But space complexity of Trie is better
+-----------------------------------------------
 public class TrieNode {
     char data;
     boolean isTerminating;
