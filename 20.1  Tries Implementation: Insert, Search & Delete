@@ -4,6 +4,10 @@ Create Package: default
 
 Create class: TrieNode
 -----------------------------------------------
+Time complexity:  add -> O(word length)
+                  remove -> O(word length)
+                  search -> O(word length)
+-----------------------------------------------                  
 public class TrieNode {
     char data;
     boolean isTerminating;
