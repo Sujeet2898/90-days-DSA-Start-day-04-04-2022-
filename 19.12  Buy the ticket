@@ -27,7 +27,10 @@ Create class: PriorityQueueUse
 -----------------------------------------------
 Time Complexity: O(N * logN)
 -----------------------------------------------
+import java.util.Collections;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Queue;
 
 public class PriorityQueueUse {
 
