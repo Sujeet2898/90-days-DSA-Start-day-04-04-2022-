@@ -119,10 +119,10 @@ public class Trie {
 
         for(int i = 0 ; i<input.size();i++) {
 
-            String string = input.get(i);
+            String str = input.get(i);
             Trie suffixTrie = new Trie();
-            for(int j=0;j<string.length();j++) {
-                suffixTrie.add(string.substring(j));
+            for(int j=0;j<str.length();j++) {
+                suffixTrie.add(str.substring(j));
             }
             if(suffixTrie.search(pattern)) {
                 return true;
