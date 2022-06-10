@@ -80,7 +80,7 @@ public class Trie {
         add(root, word);
     }
 
-    // Search function
+    // Search function with boolean
 
     // private search function for updating root each time
     private boolean search(TrieNode root, String word){
