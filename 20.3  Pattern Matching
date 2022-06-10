@@ -114,6 +114,8 @@ public class Trie {
     }
 
     // No need of remove function
+    
+    // Note: Add function is compulsory to implement for "patternMatching"
 
     public boolean patternMatching(ArrayList<String> input, String pattern) {
 
