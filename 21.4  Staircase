@@ -1,0 +1,52 @@
+Q.  Code: Staircase
+-----------------------------------------------
+A child runs up a staircase with 'n' steps and can hop either 1 step, 2 steps or 3 steps at a time. Implement a method to count and return all possible ways in which the child can run-up to the stairs.
+-----------------------------------------------
+Create Project: Dynamic Programming
+
+Create Package: default
+
+Create class: Staircase
+-----------------------------------------------
+public class Staircase {
+
+   public static long staircase(int n) {
+       
+       // for no. of stair 0, 1 & 2
+        if(n==0) {
+            return 1;
+        }
+        if(n==1) {
+            return 1;
+        }
+        if(n==2) {
+            return 2;
+        }
+        
+        // Our target is to store result in a storageArray
+        long storage[] = new long[n+1];
+        
+        // Entry corresponding to baseCase
+        storage[1] = 0;
+        storage[0] = 1;
+        storage[1] = 1;
+        storage[2] = 2;
+        
+        // "for" loop for next entries
+        for(int i=3;i<=n;i++) {
+            storage[i] = storage[i-1] + storage[i-2] + storage[i-3];
+        }
+        
+        return storage[n];
+    }
+
+    public static void main(String[] args) {
+        int n = 10;
+        System.out.println(staircase(n));
+    }
+  }
+  ------------------------------------------
+  Output:
+  274
+  
+  ******************************************
