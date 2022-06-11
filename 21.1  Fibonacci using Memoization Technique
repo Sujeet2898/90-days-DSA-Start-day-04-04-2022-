@@ -32,7 +32,7 @@ public class Fibonacci {
     }
 
     // Function for storing result (only unique result to avoid redundancy)
-    public static int fibM(int n, int storage[]){
+    private static int fibM(int n, int storage[]){
 
         // BaseCase
         if (n == 0 || n == 1){
