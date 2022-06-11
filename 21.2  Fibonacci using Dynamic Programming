@@ -50,7 +50,12 @@ public class Fibonacci {
         return storage[n];
     }
     
-    /*   Time Complexity: O(n) by using Dynamic Programming    */
+    /*   Time Complexity: O(n) by using Dynamic Programming
+     
+     Dynamic Programming: 
+     1. Overlapping Sub-problems
+     2. Optimal Sub-structure
+     */
 
     public static int fibDP(int n){
 
