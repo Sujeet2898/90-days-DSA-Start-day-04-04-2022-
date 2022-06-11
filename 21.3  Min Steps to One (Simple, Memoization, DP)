@@ -9,7 +9,7 @@ Create Project: Dynamic Programming
 
 Create Package: default
 
-Create class: Fibonacci
+Create class: TakeNumberToOne
 -----------------------------------------------
 public class TakeNumberToOne {
 
