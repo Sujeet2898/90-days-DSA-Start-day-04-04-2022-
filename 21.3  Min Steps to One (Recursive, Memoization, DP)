@@ -85,7 +85,7 @@ public class TakeNumberToOne {
         return storage[n];
     }
     
-     /*   Time Complexity: O(n) by using Dynamic Programming
+     /*   Time Complexity: O(n) by using Dynamic Programming  */
 
     public static int countStepsDP(int n){
 
