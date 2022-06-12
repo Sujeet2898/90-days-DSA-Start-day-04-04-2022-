@@ -34,6 +34,18 @@ public class MinimumCountOfSquares {
 
         return (value1 + value2) % mod;
     }
+    
+    /*                OR
+    public static long countBalancedBTs(long h){
+        if (h == 0 || h == 1){
+            return 1;
+        }
+        long mod = (long)Math.pow(10, 9) + 7;
+        long x = countBalancedBTs(h - 1);
+        long y = countBalancedBTs(h - 2);
+        return (x*x + 2*x*y) % mod;
+    }
+    */
 
     /*   Time Complexity: O(h) by using Memoization Technique    */
 
