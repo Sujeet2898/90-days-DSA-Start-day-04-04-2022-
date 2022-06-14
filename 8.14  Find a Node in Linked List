@@ -59,17 +59,13 @@ public class LinkedListUse {
     }
 
     public static int findNode(Node<Integer> head, int n) {
-        // Write your code here.
+        
         Node<Integer> temp = head;
         int count=0;
-        while (temp!=null)
-        {
-            if (temp.data==n)
-            {
+        while (temp!=null){
+            if (temp.data==n){
                 return count;
-            }
-            else
-            {
+            }else{
                 temp=temp.next;
                 count++;
             }
