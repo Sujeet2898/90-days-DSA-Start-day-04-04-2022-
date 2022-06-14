@@ -61,20 +61,20 @@ public class LinkedListUse {
 
     public static Node<Integer> delete(Node<Integer> head, int pos) {
 
-
-        if(pos==0)
-            return head.next;
+        if(pos==0){
+          return head.next;
+        }
+          
         int count=0;
-        Node<Integer> temp=head;
-        while(temp!=null && count<pos-1)
-        {
-            temp=temp.next;
+        Node<Integer>temp = head;
+        while(temp != null && count < pos-1){
+            temp = temp.next;
             count++;
         }
 
-        if(temp.next!=null)
-            temp.next=temp.next.next;
-
+        if(temp.next!=null){
+          temp.next = temp.next.next;
+        }
         return head;
     }
 
