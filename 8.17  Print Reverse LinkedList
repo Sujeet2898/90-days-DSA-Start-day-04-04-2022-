@@ -52,12 +52,10 @@ public class LinkedListUse {
     }
 
     public static void printReverse(Node<Integer> root) {
-        //Your code goes here
-        Node<Integer> smallOutput=printReverseRecursion(root);
+      Node<Integer> smallOutput=printReverseRecursion(root);
     }
 
-    public static Node<Integer> printReverseRecursion(Node<Integer> node)
-    {
+    public static Node<Integer> printReverseRecursion(Node<Integer> node) {
         if (node==null)
             return node;
         Node<Integer> smallOutput=printReverseRecursion(node.next);
