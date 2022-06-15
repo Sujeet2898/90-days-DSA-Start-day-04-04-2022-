@@ -63,12 +63,12 @@ public class LinkedListUse {
         }
 
         Node<Integer> reverseTail = head.next;
-        Node<Integer> smallHead = reverseR(head.next);
+        Node<Integer> smallHead = reverseR(head.next);    // smallHead is the reverseHead
 
         reverseTail.next = head;
         head.next = null;
 
-        return smallHead;
+        return smallHead;    // return reverseHead
     }
 
     public static void main(String args[]){
