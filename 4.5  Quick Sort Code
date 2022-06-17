@@ -36,7 +36,8 @@ public class QuickSortCode{
         a[si + smallerNumCount] = pivotElement;
         a[si] = temp;
 
-        int i =si;
+        // Take i = si & j = ei to avoid runtimeError (ArrayIndexOutOfBoundsException)
+        int i = si;
         int j = ei;
         while (i < j) {
             if (a[i] < pivotElement) {
