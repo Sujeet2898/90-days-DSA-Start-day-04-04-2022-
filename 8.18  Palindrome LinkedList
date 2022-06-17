@@ -47,26 +47,38 @@ public class LinkedListUse {
         return head;
     }
 
-    public static boolean isPalindrome(Node<Integer> head) {
-        Node<Integer> middle=head,fast=head;
-        while(fast.next!=null && fast.next.next!=null){
-            middle=middle.next;
-            fast=fast.next.next;
+    public static boolean isPalindrome(Node<Integer> head){
+
+        // finding middle of the LinkedList
+        Node<Integer> slow = head, fast = head, mid = null;
+        while (fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
         }
-        Node<Integer> curr=middle.next,next=null,prev=null;
-        while(curr!=null){
-            next=curr.next;
-            curr.next=prev;
-            prev=curr;
-            curr=next;
+
+        // Odd --> fast is not null
+        if (fast != null){
+            mid = slow.next;
+        } else {
+            mid = slow;
         }
-        middle.next=prev;
-        curr=middle.next;
-        while(curr!=null){
-            if(curr.data!=head.data)
+
+        // Reversing the second half of LinkedList
+        Node<Integer> prev = null, next = null;
+        while (mid != null){
+            next = mid.next;
+            mid.next = prev;
+            prev = mid;
+            mid = next;
+        }
+
+        // Comparing two LinkedList
+        while (prev != null){
+            if (prev.data != head.data){
                 return false;
-            head=head.next;
-            curr=curr.next;
+            }
+            prev = prev.next;
+            head = head.next;
         }
         return true;
     }
