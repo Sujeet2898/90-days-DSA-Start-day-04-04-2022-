@@ -10,6 +10,8 @@ Line 2 : Array elements (separated by space)
 Output format :
 Array elements in increasing order (separated by space)
 ------------------------------
+Time Complexity: O(n)
+------------------------------
 
 Create Project: Recursion
 
