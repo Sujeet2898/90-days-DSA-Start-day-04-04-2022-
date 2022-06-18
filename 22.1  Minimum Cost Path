@@ -145,9 +145,9 @@ public class MinimumCostPath {
  }
  ----------------------------------------------
  Output:
- 13
- 13
- 13
+ 13     // Quickly run 
+ 13     // Quickly run 
+ 13     // Take time in running
  
  
  **********************************************
