@@ -135,4 +135,19 @@ public class MinimumCostPath {
         // returning first cell value
         return storage[0][0];
     }
+    
+    public static void main(String[] args) {
+        int arr[][] = {{1,1,1}, {4,5,2}, {7,8,9}};
+        System.out.println(minCostPathDP(arr));
+        System.out.println(minCostPathM(arr));
+        System.out.println(minCostPath(arr));
+    }
  }
+ ----------------------------------------------
+ Output:
+ 13
+ 13
+ 13
+ 
+ 
+ **********************************************
