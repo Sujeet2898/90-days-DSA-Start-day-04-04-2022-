@@ -118,8 +118,8 @@ public class LeastCommonSubsequence {
         }
 
         // Entry corresponding to first row
-        for (int i = 0; i <= n; i++){
-            storage[0][i] = 0;
+        for (int j = 0; j <= n; j++){
+            storage[0][j] = 0;
         }
 
         // "double for" loop for next entries of remaining cells
