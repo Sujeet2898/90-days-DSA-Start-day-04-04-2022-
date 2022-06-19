@@ -110,6 +110,8 @@ public class LeastCommonSubsequence {
         // Our target is to store result in a storageArray
         int storage[][] = new int[m+1][n+1];
 
+        // 2 BaseCase:
+        
         // Entry corresponding to first column
         for (int i = 0; i <= m; i++){
             storage[i][0] = 0;
