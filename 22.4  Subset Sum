@@ -1,0 +1,67 @@
+Q.  Subset Sum
+-----------------------------------------------
+You are given a set of N integers. You have to return true if there exists a subset that sum up to K, otherwise return false.
+-----------------------------------------------
+Create Project: Dynamic Programming
+
+Create Package: default
+
+Create class: SubsetSum
+-----------------------------------------------
+public class SubsetSum {
+
+    static boolean isSubsetPresent(int[] arr, int n, int sum){
+
+        boolean[][] dp = new boolean[n + 1][sum + 1];
+        for (int i = 0; i < dp.length; i++){
+            for (int j = 0; j < dp[0].length; j++){
+                if (i == 0 && j == 0){
+                    dp[i][j] = true;
+                }else if (i == 0){
+                    dp[i][j] = false;
+                }else if (j == 0){
+                    dp[i][j] = true;
+                }else{
+                    if (dp[i - 1][j] == true){
+                        dp[i][j] = true;
+                    }else {
+                        int val = arr[i - 1];
+                        if (j >= val){
+                            if (dp[i - 1][j - val] == true){
+                                dp[i][j] = true;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return dp[arr.length][sum];
+    }
+    
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < arr.length; i++){
+            arr[i] = scn.nextInt();
+        }
+        int targetSum = scn.nextInt();  // targetSum is sum
+        System.out.println(isSubsetPresent(arr,n,targetSum));
+    }
+ }
+--------------------------------------------
+Input:
+4
+4 3 5 2
+13
+Output:
+false
+--------------------------------------------
+Input:
+5
+4 2 5 6 7
+14
+Output:
+true
+
+*****************************************
