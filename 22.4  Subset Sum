@@ -15,17 +15,33 @@ public class SubsetSum {
         boolean[][] dp = new boolean[n + 1][sum + 1];
         for (int i = 0; i < dp.length; i++){
             for (int j = 0; j < dp[0].length; j++){
+            
+            // Case 1: First cell
                 if (i == 0 && j == 0){
                     dp[i][j] = true;
+                    
+            // Case 2: All cells of First row
                 }else if (i == 0){
                     dp[i][j] = false;
+                    
+            // Case 3: All cells of First column
                 }else if (j == 0){
                     dp[i][j] = true;
+                    
+            // Case 4: Remaining cells has two case
                 }else{
+                
+                // Case 1: Not included, look exactly upward
                     if (dp[i - 1][j] == true){
                         dp[i][j] = true;
+                        
+                // Case 2: Included
                     }else {
+                    
+                    // ith index of dp is aligned with (i - 1)th index
                         int val = arr[i - 1];
+                        
+                      // included only if jth tagetSum is greater than value at (i - 1)th index
                         if (j >= val){
                             if (dp[i - 1][j - val] == true){
                                 dp[i][j] = true;
@@ -45,7 +61,7 @@ public class SubsetSum {
         for (int i = 0; i < arr.length; i++){
             arr[i] = scn.nextInt();
         }
-        int targetSum = scn.nextInt();  // targetSum is sum
+        int targetSum = scn.nextInt();  // here, targetSum is sum
         System.out.println(isSubsetPresent(arr,n,targetSum));
     }
  }
