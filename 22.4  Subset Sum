@@ -43,6 +43,8 @@ public class SubsetSum {
                         
                       // included only if jth tagetSum is greater than value at (i - 1)th index
                         if (j >= val){
+                        
+                           // look exactly at j-val
                             if (dp[i - 1][j - val] == true){
                                 dp[i][j] = true;
                             }
