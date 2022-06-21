@@ -17,10 +17,10 @@ public class WaysToMakeCoinChangeP {
         // for no transaction
         dp[0] = 1;
 
-        // Outer loop is for the coins so that we can form combination
+        // Outer loop to form permutation
         for (int i = 1; i < dp.length; i++){
 
-            // Inner loop is for specific coin of outer loop and proceed onwards from this particular coin
+            // Inner loop is for specific coin of outer loop
             for (int j = 0; j < denominations.length; j++){
                 if (denominations[j] <= i) {
                     dp[i] += dp[i - denominations[j]];
