@@ -1,4 +1,4 @@
-Q.  Code: 0-1 Knapsack
+Q.  Code: 0-1 Knapsack  (Duplicacy not allowed)
 ----------------------------------------------
 A thief is robbing a store and can carry a maximal weight of W into his knapsack. There are N items and ith item weighs wi and is of value vi. Considering the constraints of maximum weight that knapsack can carry, you have to find and return the maximum value that thief can generate by stealing items.
 Note
