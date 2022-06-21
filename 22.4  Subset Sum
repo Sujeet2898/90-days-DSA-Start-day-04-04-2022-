@@ -8,6 +8,11 @@ Create Package: default
 
 Create class: SubsetSum
 -----------------------------------------------
+Dynamic Programming steps:
+1. Storage & Meaning
+2. Direction
+3. Travel & Solve
+-----------------------------------------------
 public class SubsetSum {
 
     static boolean isSubsetPresent(int[] arr, int n, int sum){
