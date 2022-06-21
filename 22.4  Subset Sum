@@ -1,4 +1,4 @@
-Q.  Subset Sum
+Q.  Subset Sum (Duplicacy not allowed)
 -----------------------------------------------
 You are given a set of N integers. You have to return true if there exists a subset that sum up to K, otherwise return false.
 -----------------------------------------------
