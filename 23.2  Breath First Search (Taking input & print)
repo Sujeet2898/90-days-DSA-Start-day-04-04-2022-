@@ -113,16 +113,28 @@ public class Graph {
 
     public static void printBFSHelper(int edges[][], int startingVertex, boolean visited[]){
         QueueUsingLL<Integer> queue = new QueueUsingLL<>();
+        
+        // Adding startingVertex into Queue
         queue.enqueue(startingVertex);
+        
         visited[startingVertex] = true;
+        
+        // Work : As long as Queue is not empty
         while (!queue.isEmpty()){
             int front;
+            
             try {
+            
+            // Work 1 : Removing frontNode from the Queue
                 front = queue.dequeue();
+            
             } catch (QueueEmptyException e) {
                 return;
             }
+            
+            // Work 2 : Printing the Removed frontNode
             System.out.println(front);
+            
             for (int i = 0; i < edges.length; i++){
                 if (edges[front][i] == 1 && !visited[i]){
                     queue.enqueue(i);
