@@ -117,6 +117,7 @@ public class Graph {
         // Adding startingVertex into Queue
         queue.enqueue(startingVertex);
         
+        // As soon as something is going into the queue, we should marked it as visited
         visited[startingVertex] = true;
         
         // Work : As long as Queue is not empty
@@ -135,9 +136,12 @@ public class Graph {
             // Work 2 : Printing the Removed frontNode
             System.out.println(front);
             
+            // Work 3 : Adding whatever adjacent to startingVertex into the queue
             for (int i = 0; i < edges.length; i++){
                 if (edges[front][i] == 1 && !visited[i]){
                     queue.enqueue(i);
+                    
+                    // As soon as something is going into the queue, we should marked it as visited
                     visited[i] =true;
                 }
             }
