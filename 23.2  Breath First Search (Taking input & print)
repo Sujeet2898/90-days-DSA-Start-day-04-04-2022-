@@ -90,12 +90,12 @@ import java.util.Scanner;
 
 public class Graph {
 
-    public static void printHelper(int edges[][], int startingVertex, boolean visited[]){
+    public static void printDFSHelper(int edges[][], int startingVertex, boolean visited[]){
         System.out.println(startingVertex);
         visited[startingVertex] = true;
         for (int i = 0; i < edges.length; i++){
             if (edges[startingVertex][i] == 1 && !visited[i]){
-                printHelper(edges, i, visited);  // i become startingVertex
+                printDFSHelper(edges, i, visited);  // i become startingVertex
             }
         }
     }
@@ -106,7 +106,7 @@ public class Graph {
         // Traversing each disconnected graph
         for (int i = 0; i < edges.length; i++) {
             if (!visited[i]) {
-                printHelper(edges, i, visited);
+                printDFSHelper(edges, i, visited);
             }
         }
     }
