@@ -62,7 +62,7 @@ public class Solution {
             
             
             // Work 1 : Removing frontNode from the Queue
-                front = queue.poll();
+                front = queue.remove();
            
             
             // Work 2 : Printing the Removed frontNode
