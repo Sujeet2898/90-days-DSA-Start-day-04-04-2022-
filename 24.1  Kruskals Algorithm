@@ -14,12 +14,13 @@ class Edge implements Comparable<Edge>{
 
     @Override
     public int compareTo(Edge o) {
-        return this.weight - o.weight;
+        return this.weight - o.weight;   // for sorting in icreasing order
     }
 }
 
 public class Graphs {
 
+  // Creating function findParent whose work is to find the topMost parent of given vertex
     public static int findParent(int vertex, int parent[]){
         if (parent[vertex] == vertex) {
             return vertex;
@@ -28,23 +29,31 @@ public class Graphs {
     }
 
     public static void kruskals(Edge input[], int n){
+    
+    // Sorting the array based on weight by implementing an interface comparable
         Arrays.sort(input);
-
+   
+    // Creating storage output of (totalNoOfVertices - 1) size
         Edge output[] = new Edge[n - 1];
 
+    // Initializing parent array for identifying the final parent of edge between two vertices    
         int parent[] = new int[n];
         for (int i = 0; i < n; i++){
             parent[i] = i;
         }
 
-        int count = 0;
-        int i = 0;
+        int count = 0;  // for representing no. of edges which have gone into output (MST)
+        int i = 0;    // for representing at which edges of input array, we are working
+        
         while (count != n - 1){
+        
             Edge currentEdge = input[i];
-
+   
+          // Checking currentEdge before adding into output by figuring out both vertexParent OF currentEdge (cycle exiting or not)
             int sourceParent = findParent(currentEdge.source, parent);
             int destParent = findParent(currentEdge.dest, parent);
 
+          // Checking value of vertexParent
             if (sourceParent != destParent){
                 output[count] = currentEdge;
                 count++;
@@ -61,15 +70,21 @@ public class Graphs {
             }
         }
     }
+    
 
     public static void main(String[] args) {
+    
+    // Taking Inputs:
         Scanner scn = new Scanner(System.in);
         int totalNoOfVertices = scn.nextInt();
         int totalNoOfEdges = scn.nextInt();
 
+        // Creating array of edge type
         Edge input[] = new Edge[totalNoOfEdges];
+        
         for (int i = 0; i < totalNoOfEdges; i++){
-            input[i] = new Edge();
+            input[i] = new Edge();                  // Initially null is stored in array
+            
             input[i].source = scn.nextInt();
             input[i].dest = scn.nextInt();
             input[i].weight = scn.nextInt();
