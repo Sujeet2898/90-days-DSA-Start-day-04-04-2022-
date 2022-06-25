@@ -3,6 +3,10 @@ Q.  Code : Prim's Algorithm
 Given an undirected, connected and weighted graph G(V, E) with V number of vertices (which are numbered from 0 to V-1) and E number of edges.
 Find and print the Minimum Spanning Tree (MST) using Prim's algorithm.
 -----------------------------------------
+Present Time Complexity: O(V^2)
+
+Improved Time Complexity: Olog(V+E) if we use priority queue O(logn) for finding minVertex & adjacency list O(logn) in place of adjacency matrix
+----------------------------------------
 For printing MST follow the steps -
 
 1. In one line, print an edge which is part of MST in the format - 
