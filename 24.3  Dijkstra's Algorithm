@@ -32,7 +32,7 @@ public class Dijkstra {
     private static void dijkstra(int[][] adjacencyMatrix) {
         int totalNoOfVertices = adjacencyMatrix.length;
 
-        // Creating 3 arrays of size 'totalNoOfVertices'
+        // Creating 2 arrays of size 'totalNoOfVertices'
         boolean visited[] = new boolean[totalNoOfVertices];
         int distance[] = new int[totalNoOfVertices];
 
