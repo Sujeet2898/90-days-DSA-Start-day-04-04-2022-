@@ -84,9 +84,9 @@ public class Dijkstra {
         for (int i = 0; i < totalNoOfEdges; i++){
             int firstVertex = scn.nextInt();
             int secondVertex = scn.nextInt();
-            int weight = scn.nextInt();
-            adjacencyMatrix[firstVertex][secondVertex] = weight;
-            adjacencyMatrix[secondVertex][firstVertex] = weight;
+            int distance = scn.nextInt();
+            adjacencyMatrix[firstVertex][secondVertex] = distance;
+            adjacencyMatrix[secondVertex][firstVertex] = distance;
         }
         dijkstra(adjacencyMatrix);
     }
