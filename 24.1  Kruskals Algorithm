@@ -36,7 +36,7 @@ public class Graphs {
     // Creating storage output of (totalNoOfVertices - 1) size
         Edge output[] = new Edge[n - 1];
 
-    // Initializing parent array for identifying the final parent of edge between two vertices    
+    // Initializing parent array (Same as index) for identifying the final parent of edge between two vertices    
         int parent[] = new int[n];
         for (int i = 0; i < n; i++){
             parent[i] = i;
@@ -49,7 +49,7 @@ public class Graphs {
         
             Edge currentEdge = input[i];
    
-          // Checking currentEdge before adding into output by figuring out both vertexParent OF currentEdge (cycle exiting or not)
+          // Checking currentEdge before adding into output by figuring out both vertexParent of currentEdge (cycle exiting or not)
             int sourceParent = findParent(currentEdge.source, parent);
             int destParent = findParent(currentEdge.dest, parent);
 
@@ -57,8 +57,12 @@ public class Graphs {
             if (sourceParent != destParent){
                 output[count] = currentEdge;
                 count++;
+                
+                // Making anyone of two vertices as parent and anyone of two vertices as child
                 parent[sourceParent] = destParent;
             }
+            
+            // We have to update 'i' irrespective of above if condition
             i++;
         }
 
