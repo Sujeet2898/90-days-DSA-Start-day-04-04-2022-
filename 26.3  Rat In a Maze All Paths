@@ -44,7 +44,7 @@ public class PrintAllPaths {
             return;
         }
 
-        // Explore further in all directions
+        // Explore further in all directions recursively
         // Top
         printAllPaths(maze, i - 1, j, path);
         // Right
