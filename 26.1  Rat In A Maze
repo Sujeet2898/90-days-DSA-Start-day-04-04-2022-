@@ -29,8 +29,8 @@ public class RatInAMaze {
         int n = maze.length;
 
         // Check if i,j cell is valid or not
-        if (i < 0 || i >= n || j < 0 || j >= n || maze[i][j] == 0 || path[i][j] == 1){
-            return false;
+        if (i < 0 || i >= n || j < 0 || j >= n || maze[i][j] == 0 || path[i][j] == 1){     // maze[i][j] == 0 -> cell is blocked
+            return false;                                                                  // path[i][j] == 1 -> cell is already visited
         }
 
         // Include the cell in current path
