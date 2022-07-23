@@ -71,7 +71,7 @@ public class LinkedListUse {
         while(t1 != null){
         
             for (int i = 0; i < M-1 && t1 != null; i++){
-                t1 = t1.next;
+                t1 = t1.next;  // t1 is at end of M
             }  
             if (t1 == null){
                 break;
@@ -84,7 +84,7 @@ public class LinkedListUse {
             } 
             
             t1.next = t2;     // appending next M after previous M
-            t1 = t2;         // pointing head at start of next M
+            t1 = t2;          // pointing head at start of next M
         }
 
         return head;
