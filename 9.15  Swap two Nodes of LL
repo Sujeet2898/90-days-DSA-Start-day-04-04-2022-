@@ -2,6 +2,8 @@ Q.  Swap two Nodes of LL
 -------------------------
 You have been given a singly linked list of integers along with two integers, 'i,' and 'j.' Swap the nodes that are present at the 'i-th' and 'j-th' positions.
 -------------------------
+Remember, the nodes themselves must be swapped and not the datas.
+------------------------
 
 Solution:
 ---------------
@@ -117,7 +119,7 @@ Output:
 
 /*
 Link: https://www.youtube.com/watch?v=MiZkTndx3Uc
-Question: Swapping Nodes in a Linked List
+Question: Swapping Nodes in a Linked List (Swap Datas)
 You are given the head of a linked list, and an integer k.
 Return the head of the linked list after swapping the values of the kth node from the beginning and the kth node from the end (the list is 0-indexed).
  */
