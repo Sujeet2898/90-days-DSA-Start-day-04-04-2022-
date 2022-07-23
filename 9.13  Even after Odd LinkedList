@@ -51,77 +51,60 @@ public class LinkedListUse {
     public static void print(Node<Integer> head){
 
         while(head != null){
-            System.out.print(head.data +" ");
+            System.out.print(head.data + " ");
             head = head.next;
         }
     }
 
     public static Node<Integer> evenAfterOdd(Node<Integer> head) {
-        //Your code goes here
-        if (head==null || head.next==null)
-        {
+        
+        if (head == null || head.next == null){
             return head;
         }
-        Node<Integer> temp=head,oddH=null,oddT=null,evenH=null,evenT=null;
-        while(temp!=null)
-        {
-            int data=temp.data;
-            //System.out.println(data);
+        
+        Node<Integer> temp = head, oddH = null, oddT = null, evenH = null, evenT = null;
+        
+        while(temp != null){
+            int data = temp.data;
 
-            if (data%2==0)
-            {
-                //System.out.println(data+" is divisble by 2");
-                if (evenT==null)
-                {
-                    //System.out.println("Adding first node");
-                    evenT=temp;
-                    evenH=temp;
+            // For Even numbers
+            if (data % 2 == 0){
+                
+                if (evenH == null){   // Adding first node
+                    evenH = temp;
+                    evenT = temp;
                 }
-                else
-                {
-                    evenT.next=temp;
-                    evenT=evenT.next;
+                else{
+                    evenT.next = temp;
+                    evenT = temp;
                 }
-                //System.out.println("Even numbers");
-                //Runner.print(evenHead);
-
             }
-            else
-            {
-                //System.out.println(data+" is not divisble by 2");
-                if (oddT==null)
-                {
-                    //System.out.println("Adding first node");
-                    oddT=temp;
-                    oddH=temp;
+            
+            // For Odd numbers
+            else{
+               
+                if (oddH == null){    // Adding first node
+                    oddH = temp;
+                    oddT = temp;
                 }
-                else
-                {
-                    oddT.next=temp;
-                    oddT=oddT.next;
+                else{
+                    oddT.next = temp;
+                    oddT = temp;
                 }
-                //System.out.println("Odd numbers");
-                //Runner.print(oddHead);
-
             }
-
-            //System.out.println();
-            temp=temp.next;
+            
+            temp = temp.next;
         }
-        //Runner.print(oddHead);
-        //Runner.print(evenHead);
-        if (oddH==null)
-        {
+   
+        if (oddH == null){     // If there is no odd no, start with even no.
             return evenH;
         }
-        else
-        {
-            oddT.next=evenH;
+        else{
+            oddT.next = evenH;    // Appending all even no. after all odd no.
         }
 
-        if (evenT!=null)
-        {
-            evenT.next=null;
+        if (evenT != null){
+            evenT.next = null;
         }
 
 
