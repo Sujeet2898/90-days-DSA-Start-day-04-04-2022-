@@ -46,7 +46,7 @@ public class StackCollections {
             }
 
         }
-        return stack.isEmpty();
+        return stack.isEmpty();   // return 'stack.isEmpty()' instead of 'return true' to avoid a few testCase failure
     }
 
     public static void main(String[] args) {
