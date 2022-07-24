@@ -34,7 +34,7 @@ public class StackCollections {
                     count++;
                 }
 
-                if (count==0 || count==1){
+                if (count == 0 || count == 1){      // count == 1 in case of expression like (a), (g), etc which are redundants
                     return true;
                 }
                 
