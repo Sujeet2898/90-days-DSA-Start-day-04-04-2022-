@@ -39,7 +39,7 @@ public class StackCollections {
             
             // 2. answer catching
             if (stack.isEmpty()){
-                span[i]=i+1;
+                span[i] = i+1;
             }
             else{
                 span[i] = i - stack.peek();
