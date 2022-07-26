@@ -88,3 +88,44 @@ Output:
 -1
 
 ***********************
+
+public static int addMinimumParentheses(String str){
+
+        // Creating Stack of Character type
+        Stack<Character> stack = new Stack<>();
+
+        for (int i = 0; i < str.length(); i++){
+            char ch = str.charAt(i);
+
+            // Opening bracket
+            if (ch == '('){
+                stack.push(ch);
+            }
+            // closing bracket
+            else {
+                if (stack.size() > 0 && stack.peek() == '('){  // Valid Parentheses
+                    stack.pop();
+                }else {
+                    stack.push(ch);  // inValid Parentheses
+                }
+            }
+        }
+        return stack.size();
+    }
+    
+     public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        String str = scn.nextLine();
+        System.out.println(addMinimumParentheses(str));
+    }
+ }
+ 
+ 
+     Input:
+     (((((
+     Output:
+     5
+     Input:
+     ))(
+     Output:
+     3
