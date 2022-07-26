@@ -16,21 +16,19 @@ import java.util.Queue;
 
 public class QueueCollections {
 
-    public static Queue<Integer> reverseKElements(Queue<Integer> input, int k)
-    {
-        if (input.size()>k)
-        {
-            k=k%input.size();
+    public static Queue<Integer> reverseKElements(Queue<Integer> input, int k){
+        
+        if (input.size() > k){
+            k = k % input.size();
         }
-        if (k==0 || k==1)
-        {
+        
+        if (k == 0 || k == 1){
             return input;
         }
 
-        reverseQueue(input,k);
+        reverseQueue(input, k);
 
-        for (int i=0;i<input.size()-k;i++)
-        {
+        for (int i = 0; i < input.size() - k; i++){   // n - k
             input.add(input.remove());
         }
 
@@ -38,15 +36,14 @@ public class QueueCollections {
 
     }
 
-    public static void reverseQueue(Queue<Integer> input, int k)
-    {
-        if (input.size()==0 || input.size()==1 || k==0)
-        {
+    public static void reverseQueue(Queue<Integer> input, int k){
+    
+        if (input.size() == 0 || input.size() == 1 || k == 0){
             return;
         }
 
         int temp=input.remove();
-        reverseQueue(input,k-1);
+        reverseQueue(input, k - 1);
         input.add(temp);
     }
 
