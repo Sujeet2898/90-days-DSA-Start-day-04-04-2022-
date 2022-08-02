@@ -225,23 +225,23 @@ public class BinaryTreeUse {
     }
     
     ------------------------------------------------------------------------
-    static ArrayList<Integer> nodeToRootPath;
+    static ArrayList<BinaryTreeNode<Integer>> nodeToRootPath;
     public static boolean isNodePresent(BinaryTreeNode<Integer> root, int x){
         if (root == null){
             return false;
         }
         if (root.data == x){
-            nodeToRootPath.add(root.data);
+            nodeToRootPath.add(root);
             return true;
         }
         boolean findInLeftChild = isNodePresent(root.left, x);
         if (findInLeftChild){
-            nodeToRootPath.add(root.data);
+            nodeToRootPath.add(root);
             return true;
         }
         boolean findInRightChild = isNodePresent(root.right, x);
         if (findInRightChild){
-            nodeToRootPath.add(root.data);
+            nodeToRootPath.add(root);
             return true;
         }
         return false;
