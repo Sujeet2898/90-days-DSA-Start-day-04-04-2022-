@@ -224,9 +224,34 @@ public class BinaryTreeUse {
         return false;
     }
     
+    ------------------------------------------------------------------------
+    static ArrayList<Integer> nodeToRootPath;
+    public static boolean isNodePresent(BinaryTreeNode<Integer> root, int x){
+        if (root == null){
+            return false;
+        }
+        if (root.data == x){
+            nodeToRootPath.add(root.data);
+            return true;
+        }
+        boolean findInLeftChild = isNodePresent(root.left, x);
+        if (findInLeftChild){
+            nodeToRootPath.add(root.data);
+            return true;
+        }
+        boolean findInRightChild = isNodePresent(root.right, x);
+        if (findInRightChild){
+            nodeToRootPath.add(root.data);
+            return true;
+        }
+        return false;
+    }
+    -----------------------------------------------------------------------
+    
     public static void main(String[] args) {
         BinaryTreeNode<Integer> root = takeInputLevelWise();
         System.out.println(isNodePresent(root, 7));
+        System.out.println(nodeToRootPath);
     }
 }
 ---------------------------------------------
