@@ -230,9 +230,9 @@ public class BinaryTreeUse {
         if (rightOutput != null){
             rightOutput.add(root.data);
             return rightOutput;
-        }else{
-            return null;
         }
+        
+        return null;
     }
     
     ------------------------------------------------------------------------------------------------
@@ -270,6 +270,7 @@ public class BinaryTreeUse {
             return rightOutput;
         }
         }
+        return null;
     }
     
     -------------------------------------------------------------------------------------
