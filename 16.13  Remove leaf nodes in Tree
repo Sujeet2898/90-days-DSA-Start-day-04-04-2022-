@@ -193,12 +193,19 @@ public class TreeUse {
     // Link: https://www.youtube.com/watch?v=0PBC_EEBHGg
     
     public static TreeNode<Integer> removeLeafNodes(TreeNode<Integer> root){
+    
+    // Remove in prOrder to avoid other removal as that in case of postOrder
+        // 1. Firstly remove away children
+        
+        // For removing, alway use reverse loop
         for (int i = root.children.size()-1; i >= 0; i--){
             TreeNode<Integer> child = root.children.get(i);
             if (child.children.size() == 0){
                 root.children.remove(child);
             }
         }
+        
+        // 2. Then remove remaining children following preOrder
         for (TreeNode<Integer> child: root.children){
             removeLeafNodes(child);
         }
