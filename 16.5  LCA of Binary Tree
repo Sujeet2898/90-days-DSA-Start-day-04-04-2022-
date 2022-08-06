@@ -213,7 +213,7 @@ public class BinaryTreeUse {
             return -1;
         }
         
-        // Case 2: Both nodes a & b is equal to Root
+        // Case 2: Either nodes a or b is equal to Root
         if(root.data==a || root.data==b) {
             return root.data;
         }
