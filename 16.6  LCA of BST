@@ -225,7 +225,7 @@ public class BinaryTreeUse {
             return lcaInBST(root.right, a, b);
         }
         
-        // Case 2: Both nodes a & b is equal to Root
+        // Case 2: Either nodes a or b is equal to Root
         if(root.data==a || root.data==b) {
             return root.data;
         }
