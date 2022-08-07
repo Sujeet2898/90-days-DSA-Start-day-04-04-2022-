@@ -23,8 +23,8 @@ import java.util.PriorityQueue;
 public class PriorityQueueUse {
 
     public static void findMedian(int arr[])  {
-        PriorityQueue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());
-        PriorityQueue<Integer> min = new PriorityQueue<>();
+        PriorityQueue<Integer> max = new PriorityQueue<>(Collections.reverseOrder());  // smaller half of data
+        PriorityQueue<Integer> min = new PriorityQueue<>();  // greater half of data
 
         for(int val : arr) {
 
